@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -31,16 +33,16 @@
                            </div>
                         </div>
                         <div class="col-3 phone">
-                           <div class="top-header-items">
+                           <a href="#" class="top-header-phone top-header-items">
                               <span><i class="fas fa-phone"></i></span>
                               <p>39885677834390</p>
-                           </div>
+                           </a>
                         </div>
                         <div class="col-2 gmail">
-                           <div class="top-header-items">
+                           <a href="#" class="top-header-mail top-header-items">
                               <span><i class="far fa-envelope"></i></span>
                               <p>Info@gmail.com</p>
-                           </div>
+                           </a>
                         </div>
                      </div>
                   </div>
@@ -65,7 +67,7 @@
             <div class="container-xl sticky-top">
                <a class="navbar-brand" href="index.html"><span class="logo-text-1">twin</span><span class="logo-text-2">kle</span></a>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span><i class="fas fa-bars"></i></span>
+               <span><i class="fas fa-bars"></i></span>
                </button>
                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                   <ul class="navbar-nav mb-2 mb-lg-0">
@@ -195,84 +197,330 @@
             <div class="container">
                <div class="row">
                   <div class="col-xl-7">
-                     <ul class="d-flex courses-menu-items">
-                        <li><a class="courses-menu-items-active" href="#"><i class="far fa-edit"></i> Description</a></li>
-                        <li><a href="#"><i class="fas fa-bookmark"></i>Curriculum</a></li>
-                        <li><a href="#"><i class="far fa-user"></i>Intructor</a></li>
-                        <li><a href="#"><i class="far fa-edit"></i>Description</a></li>
+                     <ul class="course-item-menu nav nav-pills mb-3 gap-4" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                           <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><a class="courses-item-bar"><i class="far fa-edit"></i> Description</a></button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><a class="courses-item-bar"><i class="fas fa-bookmark"></i> Curriculum</a></button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><a class="courses-item-bar"><i class="far fa-user"></i> Intructor</a></button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><a class="courses-item-bar"><i class="fas fa-user-friends"></i> Description</a></button>
+                        </li>
                      </ul>
-                     <div class="courses-document mt-2">
-                        <h4 class="mt-4">About Computer  Science and Engeneering</h4>
-                        <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas  sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
-                        <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
-                        <div class="row">
-                           <h4 class="mt-5">Whate you learn</h4>
-                           <div class="col-md-6">
-                              <div class="learn-item mt-4">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
+                     <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                           <div class="courses-document mt-2">
+                              <h4 class="mt-4">About Computer  Science and Engeneering</h4>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas  sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <div class="row">
+                                 <h4 class="mt-5">Whate you learn</h4>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <!-- item-close  -->
+                                 <div class="col-xl-12">
+                                    <h4 class="mt-5">Requirements</h4>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p class="w-75">We do not require any previous experience or pre-defined skills to take this course.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>A computer with a good internet connection.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>Related Software and hardware</p>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
-                           <div class="col-md-6">
-                              <div class="learn-item mt-4">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
-                              </div>
-                              <div class="learn-item mt-3">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>You will be able to start earning  skills.</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                           <div class="courses-document mt-2">
+                              <h4 class="mt-4">About Computer  Science and Engeneering</h4>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas  sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <div class="row">
+                                 <h4 class="mt-5">Whate you learn</h4>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <!-- item-close  -->
+                                 <div class="col-xl-12">
+                                    <h4 class="mt-5">Requirements</h4>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p class="w-75">We do not require any previous experience or pre-defined skills to take this course.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>A computer with a good internet connection.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>Related Software and hardware</p>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
-                           <!-- item-close  -->
-                           <div class="col-xl-12">
-                              <h4 class="mt-5">Requirements</h4>
-                              <div class="learn-item mt-4">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p class="w-75">We do not require any previous experience or pre-defined skills to take this course.</p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                           <div class="courses-document mt-2">
+                              <h4 class="mt-4">About Computer  Science and Engeneering</h4>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas  sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <div class="row">
+                                 <h4 class="mt-5">Whate you learn</h4>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <!-- item-close  -->
+                                 <div class="col-xl-12">
+                                    <h4 class="mt-5">Requirements</h4>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p class="w-75">We do not require any previous experience or pre-defined skills to take this course.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>A computer with a good internet connection.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>Related Software and hardware</p>
+                                    </div>
+                                 </div>
                               </div>
-                              <div class="learn-item mt-4">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>A computer with a good internet connection.</p>
-                              </div>
-                              <div class="learn-item mt-4">
-                                 <span><i class="fas fa-check"></i></span>
-                                 <p>Related Software and hardware</p>
+                           </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                           <div class="courses-document mt-2">
+                              <h4 class="mt-4">About Computer  Science and Engeneering</h4>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas  sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <p class="mt-4">I must explain to you how all this a mistaken idea of denouncing great explorer of the rut the is lder of human happiness pcias unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p>
+                              <div class="row">
+                                 <h4 class="mt-5">Whate you learn</h4>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                    <div class="learn-item mt-3">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>You will be able to start earning  skills.</p>
+                                    </div>
+                                 </div>
+                                 <!-- item-close  -->
+                                 <div class="col-xl-12">
+                                    <h4 class="mt-5">Requirements</h4>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p class="w-75">We do not require any previous experience or pre-defined skills to take this course.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>A computer with a good internet connection.</p>
+                                    </div>
+                                    <div class="learn-item mt-4">
+                                       <span><i class="fas fa-check"></i></span>
+                                       <p>Related Software and hardware</p>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -283,34 +531,34 @@
                            <p>Discover Your Perfect Program In Our Courses</p>
                         </div>
                         <div class="col-md-6">
-                           <div class="card mt-4 mb-5 course-card computer">
+                           <div class="card mt-4 mb-4 course-card computer">
                               <img src="./assets/img/courses/computer.png" alt="computer-img">
                               <h4>Computer</h4>
                               <p>Our set he for firmament morning sixth subdue today .</p>
-                              <div class="d-flex justify-content-between course-card-footer">
+                              <div class="d-flex justify-content-between align-items-center course-card-footer">
                                  <div class="date d-flex">
                                     <span><i class="far fa-calendar"></i></span>
                                     <p>2 Month</p>
                                  </div>
                                  <div class="read-more d-flex">
-                                    <p>Read More</p>
+                                    <a href="#">Read More</a>
                                     <span><i class="fas fa-arrow-right"></i></span>
                                  </div>
                               </div>
                            </div>
                         </div>
                         <div class="col-md-6">
-                           <div class="card mt-4 mb-5 course-card electrical">
+                           <div class="card mt-4 mb-4 course-card electrical">
                               <img src="./assets/img/courses/electrical.png" alt="computer-img">
                               <h4>Electricale </h4>
                               <p>Our set he for firmament morning sixth subdue today .</p>
-                              <div class="d-flex justify-content-between course-card-footer">
+                              <div class="d-flex justify-content-between align-items-center course-card-footer">
                                  <div class="date d-flex">
                                     <span><i class="far fa-calendar"></i></span>
                                     <p>2 Month</p>
                                  </div>
                                  <div class="read-more d-flex">
-                                    <p>Read More</p>
+                                    <a href="#">Read More</a>
                                     <span><i class="fas fa-arrow-right"></i></span>
                                  </div>
                               </div>
@@ -322,7 +570,7 @@
                      <div class="latest-course mt-3 mb-4">
                         <div class="card p-3">
                            <h4 class="latest-coures">Latest Coures</h4>
-                           <div class="d-flex justify-content-between align-items-center mt-4">
+                           <a href="#" class="d-flex justify-content-between align-items-center mt-4">
                               <div class="latest-img-part">
                                  <img class="img-fluid" src="./assets/img/latest-courses/courses-01.png" alt="courses-img">
                               </div>
@@ -330,8 +578,8 @@
                                  <h5>A computer with a good internet connection.</h5>
                                  <p>You will be able to start earning money ...</p>
                               </div>
-                           </div>
-                           <div class="d-flex justify-content-between align-items-center mt-4">
+                           </a>
+                           <a href="#" class="d-flex justify-content-between align-items-center mt-4">
                               <div class="latest-img-part">
                                  <img class="img-fluid" src="./assets/img/latest-courses/courses-02.png" alt="courses-img">
                               </div>
@@ -339,8 +587,8 @@
                                  <h5>A computer with a good internet connection.</h5>
                                  <p>You will be able to start earning money ...</p>
                               </div>
-                           </div>
-                           <div class="d-flex justify-content-between align-items-center mt-4">
+                           </a>
+                           <a href="#" class="d-flex justify-content-between align-items-center mt-4">
                               <div class="latest-img-part">
                                  <img class="img-fluid" src="./assets/img/latest-courses/courses-03.png" alt="courses-img">
                               </div>
@@ -348,8 +596,8 @@
                                  <h5>A computer with a good internet connection.</h5>
                                  <p>You will be able to start earning money ...</p>
                               </div>
-                           </div>
-                           <div class="d-flex justify-content-between align-items-center mt-4">
+                           </a>
+                           <a href="#" class="d-flex justify-content-between align-items-center mt-4">
                               <div class="latest-img-part">
                                  <img class="img-fluid" src="./assets/img/latest-courses/courses-04.png" alt="courses-img">
                               </div>
@@ -357,7 +605,7 @@
                                  <h5>A computer with a good internet connection.</h5>
                                  <p>You will be able to start earning money ...</p>
                               </div>
-                           </div>
+                           </a>
                         </div>
                      </div>
                   </div>
