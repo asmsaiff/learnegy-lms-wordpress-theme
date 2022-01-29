@@ -697,6 +697,9 @@ footer{
 /* courses-menu-items-close  */
 
 /* latest-courses-strat  */
+.latest-description h5{
+    color: #474747;
+} 
 .latest-coures{
     color: var(--bs-primary);
 }
