@@ -226,6 +226,9 @@ footer{
     -webkit-box-shadow: 2px 3px 21px -3px rgba(255,204,204,0.75);
     -moz-box-shadow: 2px 3px 21px -3px rgba(255,204,204,0.75);
 }
+.aside-box:last-child {
+    margin-bottom: 0;
+}
 .aside-icon span{
     color: var(--bs-secondary);
     font: 22px;
@@ -947,3 +950,43 @@ footer{
     background-color: #474747; 
 }
 
+.testimonial-slider-image-wrapper img:nth-child(1) {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+	position: absolute;
+	left: 45%;
+	top: -45px;
+}
+.testimonial-slider-image-wrapper img:nth-child(2) {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+	position: absolute;
+	left: 32%;
+	top: 10%;
+}
+.testimonial-slider-image-wrapper img:nth-child(3) {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+	position: absolute;
+	top: 40%;
+	left: 28%;
+}
+.testimonial-slider-image-wrapper img:nth-child(4) {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+	position: absolute;
+	left: 32%;
+	top: 69%;
+}
+.testimonial-slider-image-wrapper img:nth-child(5) {
+	width: 70px;
+	height: 70px;
+	border-radius: 100%;
+	position: absolute;
+	left: 45%;
+	top: 93%;
+}
