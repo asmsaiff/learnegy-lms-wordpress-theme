@@ -1,0 +1,221 @@
+@media (max-width:580px) {
+    .hero-content h1{
+        font-size: 38px;
+    }
+}
+@media (max-width:300px) {
+    .hero-content h1{
+        font-size: 35px;
+    }
+}
+@media (max-width:414px) {
+    .addmission-btn {
+        background-color: var(--bs-secondary);
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 15px 20px;
+        border-radius: 5px;
+    }
+}
+@media (max-width:394px) {
+    .addmission-btn {
+        background-color: var(--bs-secondary);
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 15px 15px;
+        border-radius: 5px;
+    }
+    .contact-btn{
+        color: var(--bs-secondary);
+        text-transform: uppercase;
+        font-size: 16px;
+        padding: 13px 15px;
+        border: 2px solid var(--bs-secondary);
+    }
+}
+
+@media (max-width:1199px) {
+    .address{
+        display: none;
+    }
+    .phone{
+        width: 50%;
+    }
+}
+@media (max-width:768px) {
+    .top-header{
+        display: none;
+    }
+}
+
+@media(max-width:767px){
+    .notice-btn {
+        margin: 0 auto;
+        border: 1px solid #474747;
+        padding: 5px 20px;
+        color: #767676;
+        font-size: 12px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media (max-width:449px) {
+    .addmission-btn {
+        background-color: var(--bs-secondary);
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 20px 30px;
+        border-radius: 5px;
+        transition: 0.2s all ease;
+    }
+    .contact-btn {
+        color: var(--bs-secondary);
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 18px 30px;
+        border: 2px solid var(--bs-secondary);
+    }
+}
+@media (max-width:390px) {
+    .addmission-btn {
+        background-color: var(--bs-secondary);
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 20px 20px;
+        border-radius: 5px;
+        transition: 0.2s all ease;
+    }
+    .contact-btn {
+        color: var(--bs-secondary);
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 18px 20px;
+        border: 2px solid var(--bs-secondary);
+    }
+}
+@media (max-width:1200px) {
+    .hero-content h1{
+        font-size: 60px;
+    }
+}
+@media (max-width:580px) {
+    .hero-content h1{
+        font-size: 45px;
+    }
+}
+@media (max-width:338px){
+    .hero-content h1{
+        font-size: 35px;
+    }
+    .addmission-btn {
+        background-color: var(--bs-secondary);
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 20px 15px;
+        border-radius: 5px;
+        transition: 0.2s all ease;
+    }
+    .contact-btn {
+        color: var(--bs-secondary);
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 18px 15px;
+        border: 2px solid var(--bs-secondary);
+    }
+}
+@media (max-width:337px){
+    .hero-btn-grp{
+        display: block;
+    }
+    .contact-btn {
+        margin-top: 20px;
+        color: var(--bs-secondary);
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 18px 15px;
+        border: 2px solid var(--bs-secondary);
+    }
+}
+@media (max-width:392px){
+    .hero-content h1{
+        font-size:35px;
+    }
+}
+@media (max-width:310px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+}
+@media (max-width:991px) {
+    .news-letter-input {
+        width: 70%;
+        padding: 12px;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        outline: none;
+        display: inline-block;
+    }
+}
+@media (max-with:1999px) {
+    .principal{
+        margin: 0 auto;
+    }
+}
+@media (max-width:767px) {
+    .aside-box{
+        text-align: center;
+    }
+}
+@media (max-width:991px){
+    .hero-content h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width:527px){
+    .hero-content h1 {
+        font-size: 46px;
+    }
+}
+@media (max-width:487px){
+    .section-header h2 {
+        font-size: 32px;
+    }
+}
+@media (max-width:455px){
+    .hero-content h1 {
+        font-size: 43px;
+    }
+}
+
+@media(max-width:389px){
+    .hero-content h1 {
+        font-size: 35px;
+    }
+}
+
+/* section-header  */
+@media (max-width:991px){
+    .section-header {
+        padding: 10px 0 30px 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media (max-width:767px) {
+    .notice-btn {
+        margin: 0 auto;
+        border: 1px solid #474747;
+        padding: 10px 20px;
+        color: #767676;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+    }  
+}
