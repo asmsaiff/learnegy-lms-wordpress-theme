@@ -120,7 +120,7 @@
                         </div>
                         <div class="col-xl-6">
                             <div class="d-flex justify-content-center align-items-center">
-                            <img class="about-img" src="./assets/img/content-img/about-us.png" alt="">
+                            <img class="about-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/content-img/about-us.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -339,7 +339,7 @@
                             <div class="row">
                                 <div class="col-xl-3 col-md-6 card-items" data-item="computer">
                                     <div class="card mt-4 course-card computer">
-                                        <img src="./assets/img/courses/computer.png" alt="computer-img">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/computer.png" alt="computer-img">
                                         <h4>Computer</h4>
                                         <p>Our set he for firmament morning sixth subdue today .</p>
                                         <div class="d-flex justify-content-between align-items-center course-card-footer">
@@ -356,7 +356,7 @@
                                 </div>
                                 <div class="col-xl-3 col-md-6 card-items" data-item="electrical">
                                     <div class="card mt-4 course-card electrical">
-                                        <img src="./assets/img/courses/electrical.png" alt="computer-img">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/electrical.png" alt="computer-img">
                                         <h4>Electricale </h4>
                                         <p>Our set he for firmament morning sixth subdue today .</p>
                                         <div class="d-flex justify-content-between align-items-center course-card-footer">
@@ -373,7 +373,7 @@
                                 </div>
                                 <div class="col-xl-3 col-md-6 card-items" data-item="physics">
                                     <div class="card mt-4 course-card physics">
-                                        <img src="./assets/img/courses/physics.png" alt="computer-img">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/physics.png" alt="computer-img">
                                         <h4>Physics</h4>
                                         <p>Our set he for firmament morning sixth subdue today .</p>
                                         <div class="d-flex justify-content-between align-items-center course-card-footer">
@@ -390,7 +390,7 @@
                                 </div>
                                 <div class="col-xl-3 col-md-6 card-items" data-item="business">
                                     <div class="card mt-4 course-card business">
-                                        <img src="./assets/img/courses/bank-balnace.png" alt="computer-img">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/bank-balnace.png" alt="computer-img">
                                         <h4>Business Management</h4>
                                         <p>Our set he for firmament morning sixth subdue today .</p>
                                         <div class="d-flex justify-content-between align-items-center course-card-footer">
@@ -424,7 +424,7 @@
                     <div class="row">
                         <div class="col-xl-3 col-md-6">
                             <div class="card mt-4 teacher-info">
-                            <img src="./assets/img/teacher/teacher-01.png" alt="teacher">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-01.png" alt="teacher">
                             <div class="teacher-details">
                                 <h2>Roshan Bhula</h2>
                                 <p>Toddler Teacher</p>
@@ -438,7 +438,7 @@
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card mt-4 teacher-info">
-                            <img src="./assets/img/teacher/teacher-02.png" alt="teacher">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-02.png" alt="teacher">
                             <div class="teacher-details">
                                 <h2>Roshan Bhula</h2>
                                 <p>Toddler Teacher</p>
@@ -452,7 +452,7 @@
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card mt-4 teacher-info">
-                            <img src="./assets/img/teacher/teacher-03.png" alt="teacher">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-03.png" alt="teacher">
                             <div class="teacher-details">
                                 <h2>Roshan Bhula</h2>
                                 <p>Toddler Teacher</p>
@@ -466,7 +466,7 @@
                         </div>
                         <div class="col-xl-3 col-md-6">
                             <div class="card mt-4 teacher-info">
-                            <img src="./assets/img/teacher/teacher-04.png" alt="teacher">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-04.png" alt="teacher">
                             <div class="teacher-details">
                                 <h2>Roshan Bhula</h2>
                                 <p>Toddler Teacher</p>
@@ -489,7 +489,7 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-6 mb-5 d-flex justify-content-center align-items-center">
-                            <img src="./assets/img/content-img/learning-img.png" alt="learning-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/content-img/learning-img.png" alt="learning-img">
                         </div>
                         <div class="col-xl-6 d-flex justify-content-center align-items-center">
                             <div class="learning-wrapper">
@@ -587,7 +587,7 @@
                             <div class="row">
                                 <div class="col-xl-4 col-md-12 text-md-center">
                                     <div class="event-img text-center">
-                                        <img src="./assets/img/event/event-1.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-1.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-xl-8 col-md-12">
@@ -617,7 +617,7 @@
                             <div class="row">
                                 <div class="col-xl-4 col-md-12 text-md-center">
                                     <div class="event-img text-center">
-                                        <img src="./assets/img/event/event-2.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-2.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-xl-8 col-md-12">
@@ -647,7 +647,7 @@
                             <div class="row">
                                 <div class="col-xl-4 col-md-12 text-md-center">
                                     <div class="event-img text-center">
-                                        <img src="./assets/img/event/event-3.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-3.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-xl-8 col-md-12">
@@ -677,7 +677,7 @@
                             <div class="row">
                                 <div class="col-xl-4 col-md-12 text-md-center">
                                     <div class="event-img text-center">
-                                        <img src="./assets/img/event/event-4.png" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-4.png" alt="">
                                     </div>
                                 </div>
                                 <div class="col-xl-8 col-md-12">
@@ -724,7 +724,7 @@
                         </div>
                         <div class="col-xl-6">
                             <div class="testimonial-qute">
-                            <img src="./assets/img/svg/“.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/svg/“.svg" alt="">
                             </div>
                             <div class="testimonial-content">
                             <p>Excellent content and assignments that build on your knowledge, reinforce, and then expand. I recently secured new employment using PHP and couldn't have done so without the Professional Web Development courses.</p>
@@ -750,7 +750,7 @@
                     <div class="row">
                         <div class="col-xl-4 col-md-6">
                             <div class="card news-card mt-4">
-                            <img src="./assets/img/blog/news-01.png" alt="news-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/news-01.png" alt="news-img">
                             <div class="event-header d-flex justify-content-between">
                                 <div class="event-address d-flex">
                                     <span><i class="fas fa-globe-europe"></i></span>
@@ -773,7 +773,7 @@
                         </div>
                         <div class="col-xl-4 col-md-6">
                             <div class="card news-card mt-4">
-                            <img src="./assets/img/blog/news-02.png" alt="news-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/news-02.png" alt="news-img">
                             <div class="event-header d-flex justify-content-between">
                                 <div class="event-address d-flex">
                                     <span><i class="fas fa-globe-europe"></i></span>
@@ -796,7 +796,7 @@
                         </div>
                         <div class="col-xl-4 col-md-6">
                             <div class="card news-card mt-4">
-                            <img src="./assets/img/blog/news-03.png" alt="news-img">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/news-03.png" alt="news-img">
                             <div class="event-header d-flex justify-content-between">
                                 <div class="event-address d-flex">
                                     <span><i class="fas fa-globe-europe"></i></span>
