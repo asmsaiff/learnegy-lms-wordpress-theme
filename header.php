@@ -55,7 +55,7 @@
         <!-- nav-bar-start  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 sticky-top">
             <div class="container-xl sticky-top">
-                <a class="navbar-brand" href="index.html"><span class="logo-text-1">EDU</span><span class="logo-text-2">CARE</span></a>
+                <a class="navbar-brand" href="<?php echo home_url(); ?>"><span class="logo-text-1">EDU</span><span class="logo-text-2">CARE</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span><i class="fas fa-bars"></i></span>
                 </button>
