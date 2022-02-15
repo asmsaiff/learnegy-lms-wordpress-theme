@@ -1,4 +1,6 @@
 <?php
+    require_once get_template_directory() . '/lib/educare-nav.php';
+
     if(!function_exists('educare_theme_setup')) {
         function educare_theme_setup() {
             // Load Theme TextDomain
@@ -28,7 +30,7 @@
             );
     
             register_nav_menus(array(
-                'primary-menu'              =>  __('Primary Menu', 'craftnce'),
+                'primary-menu'              =>  __('Primary Menu', 'educare'),
             ));
         }
         add_action('after_setup_theme', 'educare_theme_setup');
@@ -45,7 +47,8 @@
         wp_enqueue_style('main-css', get_stylesheet_uri());
 
         // JS Enqueue
-        wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.bundle.js', array('jquery'), null, true );
+        wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/assets/js/popper.js', array('jquery'), null, true );
+        wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js', array('jquery'), null, true );
         wp_enqueue_script( 'main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null, true );
     }
     add_action( 'wp_enqueue_scripts', 'educare_assets_enqueue' );
