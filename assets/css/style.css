@@ -72,7 +72,7 @@ footer{
 }
 .top-header{
     background-color: var(--bs-primary);
-    padding: 19px 0;
+    padding: 10px 0;
 }
 .top-header-items{
     display: flex;
