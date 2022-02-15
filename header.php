@@ -40,10 +40,7 @@
                         <div class="header-side-btn">
                         <div class="d-flex justify-content-end">
                             <div class="login-btn header-btn">
-                                <a class="login" href="#"><i class="fas fa-sign-in-alt"></i>Login</a>
-                            </div>
-                            <div class="register-btn header-btn">
-                                <a class="register" href="#"><i class="fas fa-key"></i>Register</a>
+                                <a class="login" href="#"><i class="fas fa-sign-in-alt"></i>Admission</a>
                             </div>
                         </div>
                         </div>
@@ -53,48 +50,26 @@
         </div>
         <!-- top-header-close  -->
         <!-- nav-bar-start  -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 sticky-top shadow-sm">
             <div class="container-xl sticky-top">
                 <a class="navbar-brand" href="<?php echo home_url(); ?>"><span class="logo-text-1">EDU</span><span class="logo-text-2">CARE</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span><i class="fas fa-bars"></i></span>
                 </button>
+                
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Courses</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Accademics</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Teachers</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Notice</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link admission-btn" href="#">Admission</a>
-                        </li>
-                    </ul>
+                    <?php
+                        wp_nav_menu( array(
+                            'theme_location'        => 'primary-menu',
+                            'depth'                 => 1,
+                            'container'             => 'ul',
+                            'container_class'       => 'collapse navbar-collapse',
+                            'container_id'          => 'bs-example-navbar-collapse-1',
+                            'menu_class'            => 'navbar-nav ms-auto',
+                            'fallback_cb'           => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'                => new EduCare_Nav_Walker()
+                        ) );
+                    ?>
                 </div>
             </div>
         </nav>
