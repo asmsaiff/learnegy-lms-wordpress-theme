@@ -60,14 +60,14 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <?php
                         wp_nav_menu( array(
-                            'theme_location'        => 'primary-menu',
-                            'depth'                 => 1,
-                            'container'             => 'ul',
-                            'container_class'       => 'collapse navbar-collapse',
-                            'container_id'          => 'bs-example-navbar-collapse-1',
-                            'menu_class'            => 'navbar-nav ms-auto',
-                            'fallback_cb'           => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker'                => new EduCare_Nav_Walker()
+                            'theme_location' => 'primary-menu',
+                            'depth' => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                            'container' => 'div',
+                            'container_class' => 'collapse navbar-collapse',
+                            'container_id' => 'bs-example-navbar-collapse-1',
+                            'menu_class' => 'navbar-nav ms-auto',
+                            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                            'walker' => new WP_Bootstrap_Navwalker(),
                         ) );
                     ?>
                 </div>
