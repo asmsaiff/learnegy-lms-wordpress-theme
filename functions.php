@@ -1,6 +1,7 @@
 <?php
     require_once get_template_directory() . '/lib/educare-nav.php';
     require_once get_template_directory() . '/inc/config/customizer-config.php';
+    require_once get_template_directory() . '/inc/educare-plugins.php';
 
     if(!function_exists('educare_theme_setup')) {
         function educare_theme_setup() {
