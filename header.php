@@ -59,16 +59,15 @@
                 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <?php
-                        wp_nav_menu( array(
-                            'theme_location' => 'primary-menu',
-                            'depth' => 2, // 1 = no dropdowns, 2 = with dropdowns.
-                            'container' => 'div',
-                            'container_class' => 'collapse navbar-collapse',
-                            'container_id' => 'bs-example-navbar-collapse-1',
-                            'menu_class' => 'navbar-nav ms-auto',
-                            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                            'walker' => new WP_Bootstrap_Navwalker(),
-                        ) );
+                        wp_nav_menu(array(
+                            'theme_location'            =>  'primary-menu',
+                            'menu_class'                =>  '',
+                            'menu-container'            =>  'false',
+                            'fallback_cb'               => '__return_false',
+                            'items_wrap'                => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm %2$s">%3$s</ul>',
+                            'depth'                     => 2,
+                            'walker'                    => new craftnce_wp_nav_menu_walker(),
+                        ));
                     ?>
                 </div>
             </div>
