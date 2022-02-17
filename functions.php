@@ -45,12 +45,14 @@
         wp_enqueue_style( 'fontawesome-css', get_template_directory_uri().'/assets/css/all.css');
         wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
         wp_enqueue_style( 'theme-style-css', get_template_directory_uri().'/assets/css/style.css');
+        wp_enqueue_style( 'educare-customize-controls', get_template_directory_uri().'/assets/css/educare-customize-controls.css', array(), '1.0' );
         wp_enqueue_style( 'responsive-css', get_template_directory_uri().'/assets/css/responsive.css');
         wp_enqueue_style('main-css', get_stylesheet_uri());
 
         // JS Enqueue
         wp_enqueue_script( 'popper-js', get_template_directory_uri().'/assets/js/popper.js', array('jquery'), null, true );
         wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js', array('jquery'), null, true );
+        wp_enqueue_script( 'educare-customize-controls-js', get_template_directory_uri().'/assets/js/educare-customize-controls.js', array(), '1.0', true );
         wp_enqueue_script( 'main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null, true );
     }
     add_action( 'wp_enqueue_scripts', 'educare_assets_enqueue' );

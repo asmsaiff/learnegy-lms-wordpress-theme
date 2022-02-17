@@ -1,17 +1,25 @@
 <?php
-    $wp_customize->add_section( 'pe_section', array(
-        'title' => 'Header',
-        'panel' => 'educare_main_panel',
+
+die('did');
+
+    $wp_customize->add_section( 'educare_topbar', array(
+        'title'                 =>      'Top Bar',
+        'panel'                 =>      'educare_header',
     ));
 
-    $wp_customize->add_setting( 'pe_test', array(
-        'default' => 'default value here',
-        'sanitize_callback' => 'wp_kses_post',
-        'transport' => 'postMessage',
+    $wp_customize->add_setting( 'educare_topbar_show_settings', array(
+        'default'           => 1,
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
     ));
 
-    $wp_customize->add_control( 'pe_test', array(
-        'type' => 'text',
-        'label' => 'Some text control',
-        'section' => 'pe_section',
+    $wp_customize->add_control( 'educare_topbar_show_ctrl', array(
+        'label'             =>  __('Show topbar', 'educare'),
+        'section'           =>  'educare_header',
+        'settings'          =>  'educare_topbar_show_settings',
+        'type'              =>  'checkbox'
     ));
