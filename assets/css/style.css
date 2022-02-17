@@ -155,16 +155,6 @@ footer{
     background-size: cover;
     padding: 100px 0;
 }
-/* .slider-img::before{ */
-    /* content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding: 100%;
-    /* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(3,3,3,0.4037814955083596) 100%); */
-    
-
 .slider-btn{
     background-color: var(--bs-secondary);
     color: #ffffff;
