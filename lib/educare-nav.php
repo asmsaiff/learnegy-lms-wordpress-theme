@@ -1,5 +1,5 @@
 <?php
-	class craftnce_wp_nav_menu_walker extends Walker_Nav_menu {
+	class educare_wp_nav_menu_walker extends Walker_Nav_menu {
 		private $current_item;
 		private $dropdown_menu_alignment_values = [
 			'dropdown-menu-start',
