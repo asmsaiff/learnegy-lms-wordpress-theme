@@ -151,9 +151,9 @@ footer{
     background-color: #474747;
 }/* hero-section  */
 .slider-img{
-    background: url(../img/hero-section/slider-1.png) no-repeat bottom;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    padding: 100px 0;
 }
 .slider-btn{
     background-color: var(--bs-secondary);
@@ -161,7 +161,10 @@ footer{
     padding: 12px;
     border-radius: 5px;
 }
-
+.slider-overlay {
+    background: linear-gradient(87.21deg, rgba(255, 255, 255, 0.94) 33.17%, rgba(255, 255, 255, 0.94) 33.17%, rgba(0, 0, 0, 0) 100.61%);
+    padding: 100px 0;
+}
 .hero-content h1 {
 	color: var(--bs-primary);
 	font-size: 72px;
