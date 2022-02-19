@@ -1,4 +1,7 @@
 <?php
+    define( 'CUSTOMIZER_REPEATER_VERSION', '1.1.0' );
+
+    require_once get_template_directory() . '/inc/educare-repeater.php';
     require_once get_template_directory() . '/lib/educare-nav.php';
     require_once get_template_directory() . '/inc/config/customizer-config.php';
     require_once get_template_directory() . '/inc/educare-plugins.php';
