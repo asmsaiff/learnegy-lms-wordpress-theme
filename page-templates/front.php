@@ -7,63 +7,84 @@
 ?>
 
     <main>
+        <?php
+            $educare_home_slider = new WP_Query(array(
+                'category_name'         =>  'slider',
+            ));
+
+            $educare_home_slider_post_data = array();
+            while ( $educare_home_slider->have_posts() ) {
+                $educare_home_slider->the_post();
+
+                $educare_home_slider_post_data[] = array(
+                    "title"             =>  get_the_title(),
+                    "permalink"         =>  get_permalink(),
+                    "thumbnail"         =>  get_the_post_thumbnail_url(get_the_ID(),"large"),
+                    "excerpt"           =>  get_the_excerpt(),
+                );
+            }
+
+            if($educare_home_slider->post_count > 0) :
+        ?>
         <!-- hero-section-strat  -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="main-container slider-img">
-                        <div class="container">
-                            <div class="row">
-                            <div class="col-md-9">
-                                <div class="hero-content">
-                                    <h1>We Are Twinkle School & College</h1>
-                                    <p>Lorem ipsum dolor sit amet elit , consectetur adipiscing , sed eiusmod tempor sit amet elit dolor sit amet elit.Lorem ipsum dolor sit amet elit , consectetur adipiscing , sed eiusmod tempor sit amet elit.</p>
-                                </div>
-                                <div class="hero-btn-grp">
-                                    <a class="addmission-btn" href="#">Addmission</a>
-                                    <a class="contact-btn" href="#">Contact Us</a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="main-container slider-img">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="hero-content">
-                                        <h1>We Are Twinkle School & College</h1>
-                                        <p>Lorem ipsum dolor sit amet elit , consectetur adipiscing , sed eiusmod tempor sit amet elit dolor sit amet elit.Lorem ipsum dolor sit amet elit , consectetur adipiscing , sed eiusmod tempor sit amet elit.</p>
-                                    </div>
-                                    <div class="hero-btn-grp">
-                                        <a class="addmission-btn" href="#">Addmission</a>
-                                        <a class="contact-btn" href="#">Contact Us</a>
+                    <div class="main-container slider-img" style="background-image: url('<?php echo esc_url($educare_home_slider_post_data[0]['thumbnail']); ?>');">
+                        <div class="slider-overlay">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="hero-content">
+                                            <h1>
+                                                <?php echo esc_html($educare_home_slider_post_data[0]['title']); ?>
+                                            </h1>
+                                            <p>
+                                                <?php echo esc_html($educare_home_slider_post_data[0]['excerpt']); ?>
+                                            </p>
+                                        </div>
+
+                                        <div class="hero-btn-grp">
+                                            <a class="contact-btn"
+                                                href="<?php echo esc_url($educare_home_slider_post_data[0]['permalink']) ?>">Read
+                                                More</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <?php
+                    for($i = 1; $i < count($educare_home_slider_post_data); $i++) :
+                ?>
                 <div class="carousel-item">
-                    <div class="main-container slider-img">
-                        <div class="container">
-                            <div class="row">
-                            <div class="col-md-9">
-                                <div class="hero-content">
-                                    <h1>We Are Twinkle School & College</h1>
-                                    <p>Lorem ipsum dolor sit amet elit , consectetur adipiscing , sed eiusmod tempor sit amet elit dolor sit amet elit.Lorem ipsum dolor sit amet elit , consectetur adipiscing , sed eiusmod tempor sit amet elit.</p>
+                    <div class="main-container slider-img" style="background-image: url('<?php echo esc_html($educare_home_slider_post_data[$i]['thumbnail']); ?>');">
+                        <div class="slider-overlay">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="hero-content">
+                                            <h1>
+                                                <?php echo esc_html($educare_home_slider_post_data[$i]['title']) ?>
+                                            </h1>
+                                            <p>
+                                                <?php echo esc_html($educare_home_slider_post_data[$i]['excerpt']) ?>
+                                            </p>
+                                        </div>
+                                        <div class="hero-btn-grp">
+                                            <a class="contact-btn"
+                                                href="<?php echo esc_url($educare_home_slider_post_data[$i]['permalink']) ?>">Read
+                                                More</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="hero-btn-grp">
-                                    <a class="addmission-btn" href="#">Addmission</a>
-                                    <a class="contact-btn" href="#">Contact Us</a>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php endfor; ?>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon slider-btn" aria-hidden="true"></span>
@@ -75,6 +96,8 @@
             </button>
         </div>
         <!-- hero-section-close  -->
+        <?php endif; wp_reset_query(); ?>
+
         <!-- information-section  -->
         <section>
             <div class="main-container">
@@ -88,7 +111,7 @@
                         <div class="col-xl-6">
                             <aside>
                             <div class="aside-box">
-                                <div class="row">
+                                <div class="row align-items-center">
                                     <div class="aside-icon col-md-2 col-sm-12 text-center">
                                         <span><i class="far fa-check-square fa-3x"></i></span>
                                     </div>
@@ -99,7 +122,7 @@
                                 </div>
                             </div>
                             <div class="aside-box">
-                                <div class="row">
+                                <div class="row align-items-center">
                                     <div class="aside-icon col-md-2 col-sm-12 text-center">
                                         <span><i class="far fa-check-square fa-3x"></i></span>
                                     </div>
@@ -110,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="aside-box">
-                                <div class="row">
+                                <div class="row align-items-center">
                                     <div class="aside-icon col-md-2 col-sm-12 text-center">
                                         <span><i class="far fa-check-square fa-3x"></i></span>
                                     </div>
