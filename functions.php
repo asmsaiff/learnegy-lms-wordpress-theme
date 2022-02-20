@@ -61,3 +61,19 @@
 
     remove_filter( 'the_content', 'wpautop');
     remove_filter( 'the_excerpt', 'wpautop');
+
+    function educare_head_styles() {
+?>
+<style>
+    .news-letter-section {
+        background: url("<?php echo esc_url( get_theme_mod('educare_newsletter_bg_settings')); ?>");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 100px 0;
+        position: relative;
+        z-index: 11;
+    }
+</style>
+<?php
+    }
+    add_action('wp_head', 'educare_head_styles');
