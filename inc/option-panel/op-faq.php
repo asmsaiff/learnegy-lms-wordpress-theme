@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('educare_homepage_faq_heading_settings', array(
-        'default'           =>  'Educare School & College',
+        'default'           =>  'Flexible Study at Your Own Pace, According to Your Own Needs',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -46,19 +46,6 @@
         'section'           =>  'educare_homepage_faq',
         'settings'          =>  'educare_homepage_faq_heading_settings',
         'type'              =>  'text'
-    ));
-
-    $wp_customize->add_setting('educare_homepage_faq_desc_settings', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'sanitize_textarea_field'
-    ));
-    $wp_customize->add_control('educare_homepage_faq_desc_ctrl', array(
-        'label'             =>  __('Short Description', 'educare'),
-        'section'           =>  'educare_homepage_faq',
-        'settings'          =>  'educare_homepage_faq_desc_settings',
-        'type'              =>  'textarea'
     ));
 
     $wp_customize->add_setting( 'educare_homepage_faq_item_settings', array(

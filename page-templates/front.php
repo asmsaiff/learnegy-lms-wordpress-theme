@@ -389,13 +389,13 @@
                             <img src="<?php echo esc_url(get_theme_mod('educare_homepage_faq_featured_image_settings')); ?>" alt="">
                         </div>
                         <div class="col-xl-6 d-flex justify-content-center align-items-center">
-                            <div class="learning-wrapper">
+                            <div class="learning-wrapper w-100">
                                 <div class="learning-title">
                                     <p>
                                         <?php echo get_theme_mod('educare_homepage_faq_subheading_settings', 'Distance Learning'); ?>
                                     </p>
                                     <h2>
-                                        <?php echo get_theme_mod('educare_homepage_faq_heading_settings'); ?>
+                                        <?php echo get_theme_mod('educare_homepage_faq_heading_settings', 'Flexible Study at Your Own Pace, According to Your Own Needs'); ?>
                                     </h2>
                                 </div>
                                 <?php
