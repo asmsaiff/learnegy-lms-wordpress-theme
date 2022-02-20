@@ -42,7 +42,7 @@
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('educare_homepage_notice_heading_ctrl', array(
-        'label'             =>  __('Sub Heading', 'educare'),
+        'label'             =>  __('Heading', 'educare'),
         'section'           =>  'educare_homepage_notice',
         'settings'          =>  'educare_homepage_notice_heading_settings',
         'type'              =>  'text'
