@@ -576,14 +576,6 @@ footer{
 }
 
 /* news-letter-section-start  */
-.news-letter-section{
-    background: url("../img/content-img/news-letter.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 100px 0;
-    position: relative;
-    z-index: 11;
-}
 .news-letter-section::before{
     content: "";
     position: absolute;
