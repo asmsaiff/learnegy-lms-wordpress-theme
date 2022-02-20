@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('educare_course_heading_settings', array(
-        'default'           =>  'Couress We Offer',
+        'default'           =>  'Courses We Offer',
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
