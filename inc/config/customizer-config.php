@@ -27,6 +27,22 @@
         $wp_customize->add_panel( $educare_header );
 
         require_once get_template_directory() . '/inc/option-panel/op-header.php';
+
+        /**
+         * ================================================
+         * ================= Homepage Panel ===============
+         * ================================================
+         */
+        $educare_header = new PE_WP_Customize_Panel( $wp_customize, 'educare_homepage', array(
+            'title'             => 'Homepage Options',
+            'capability'        => 'edit_theme_options',
+            'panel'             => 'educare_theme_options',
+            'priority'          => 2,
+        ));
+        $wp_customize->add_panel( $educare_header );
+
+        require_once get_template_directory() . '/inc/option-panel/op-info.php';
+        require_once get_template_directory() . '/inc/option-panel/op-notice.php';
     }
 
     add_action( 'customize_register', 'pe_customize_register' );
