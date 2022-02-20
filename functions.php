@@ -77,3 +77,14 @@
 <?php
     }
     add_action('wp_head', 'educare_head_styles');
+
+    function educare_widgets() {
+        register_sidebar(array(
+            'name'                  =>  __('Newsletter Section', 'educare'),
+            'description'           =>  __('Add newsletter shortcode or form in this area', 'educare'),
+            'id'                    =>  'educare_newsletter_optin',
+            'before_widget'         => '<div>',
+            'after_widget'          =>  '</div>'
+        ));
+    }
+    add_action('widgets_init', 'educare_widgets');

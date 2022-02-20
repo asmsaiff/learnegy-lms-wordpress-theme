@@ -60,19 +60,6 @@
         'type'              =>  'textarea'
     ));
 
-    $wp_customize->add_setting('educare_newsletter_form_settings', array(
-        'capability'        => 'edit_theme_options',
-        'transport'         => 'refresh',
-        'type'              => 'theme_mod',
-        'sanitize_callback' => 'sanitize_textarea_field'
-    ));
-    $wp_customize->add_control('educare_newsletter_form_ctrl', array(
-        'label'             =>  __('Opt-in Form Shortcode', 'educare'),
-        'section'           =>  'educare_newsletter',
-        'settings'          =>  'educare_newsletter_form_settings',
-        'type'              =>  'textarea'
-    ));
-
     $wp_customize->add_setting('educare_newsletter_bg_settings', array(
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',

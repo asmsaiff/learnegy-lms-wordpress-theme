@@ -669,7 +669,9 @@
                                 </p>
                             </div>
                                 <?php
-                                    do_shortcode( esc_html(get_theme_mod('educare_newsletter_form_settings')));
+                                    if(is_active_sidebar( 'educare_newsletter_optin' )) {
+                                        dynamic_sidebar( 'educare_newsletter_optin' );
+                                    }
                                 ?>
                             </div>
                         </div>
