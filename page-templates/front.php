@@ -60,7 +60,7 @@
                     for($i = 1; $i < count($educare_home_slider_post_data); $i++) :
                 ?>
                 <div class="carousel-item">
-                    <div class="main-container slider-img" style="background-image: url('<?php echo esc_html($educare_home_slider_post_data[$i]['thumbnail']); ?>');">
+                    <div class="main-container slider-img" style="background-image: url('<?php echo esc_url($educare_home_slider_post_data[$i]['thumbnail']); ?>');">
                         <div class="slider-overlay">
                             <div class="container">
                                 <div class="row">
@@ -74,9 +74,9 @@
                                             </p>
                                         </div>
                                         <div class="hero-btn-grp">
-                                            <a class="contact-btn"
-                                                href="<?php echo esc_url($educare_home_slider_post_data[$i]['permalink']) ?>">Read
-                                                More</a>
+                                            <a class="contact-btn" href="<?php echo esc_url($educare_home_slider_post_data[$i]['permalink']) ?>">
+                                                <?php _e('Read More', 'educare') ?>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,9 +131,11 @@
                                             <span><i class="far fa-check-square fa-3x"></i></span>
                                         </div>
                                         <div class="aside-text col-md-10">
-                                            <h2><?php echo $info_repeater_item->title; ?></h2>
+                                            <h2>
+                                                <?php echo esc_html($info_repeater_item->title); ?>
+                                            </h2>
                                             <p>
-                                                <?php echo $info_repeater_item->text; ?>
+                                                <?php echo esc_html($info_repeater_item->text); ?>
                                             </p>
                                         </div>
                                     </div>
@@ -162,17 +164,18 @@
             <div class="main-container p-3">
                 <div class="section-header">
                     <h4>
-                        <?php echo get_theme_mod('educare_homepage_notice_subheading_settings', 'Update Notice'); ?>
+                        <?php echo esc_html(get_theme_mod('educare_homepage_notice_subheading_settings', 'Update Notice')); ?>
                     </h4>
                     <h2>
-                        <?php echo get_theme_mod('educare_homepage_notice_heading_settings', 'Notice Board'); ?>
+                        <?php echo esc_html(get_theme_mod('educare_homepage_notice_heading_settings', 'Notice Board')); ?>
                     </h2>
                 </div>
                 <div class="container">
                     <div class="row">
                         <?php
                             $educare_notice = new WP_Query(array(
-                                'category_name'         =>  'notice'
+                                'category_name'         =>  'notice',
+                                'posts_per_page'        =>  6
                             ));
 
                             if($educare_notice->post_count >= 1) :
@@ -194,11 +197,11 @@
                                         <div class="d-flex notice-footer gap-3">
                                             <div class="time d-flex">
                                                 <span><i class="far fa-clock"></i></span>
-                                                <p><?php the_field('date_time'); ?></p>
+                                                <p><?php esc_html(the_field('date_time')); ?></p>
                                             </div>
                                             <div class="time d-flex">
                                                 <span><i class="far fa-clock"></i></span>
-                                                <p><?php the_field('en_category'); ?></p>
+                                                <p><?php esc_html(the_field('en_category')); ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -241,6 +244,7 @@
                 <?php
                     $educare_course = new WP_Query(array(
                         'category_name'         =>  'course',
+                        'posts_per_page'        =>  8,
                     ));
 
                     if($educare_course->post_count >= 1) :
@@ -312,6 +316,7 @@
                 <?php
                     $educare_teacher = new WP_Query(array(
                         'category_name'         =>  'teacher',
+                        'posts_per_page'        =>  4,
                     ));
 
                     if($educare_teacher->post_count >= 1) :
@@ -392,10 +397,10 @@
                             <div class="learning-wrapper w-100">
                                 <div class="learning-title">
                                     <p>
-                                        <?php echo get_theme_mod('educare_homepage_faq_subheading_settings', 'Distance Learning'); ?>
+                                        <?php echo esc_html(get_theme_mod('educare_homepage_faq_subheading_settings', 'Distance Learning')); ?>
                                     </p>
                                     <h2>
-                                        <?php echo get_theme_mod('educare_homepage_faq_heading_settings', 'Flexible Study at Your Own Pace, According to Your Own Needs'); ?>
+                                        <?php echo esc_html(get_theme_mod('educare_homepage_faq_heading_settings', 'Flexible Study at Your Own Pace, According to Your Own Needs')); ?>
                                     </h2>
                                 </div>
                                 <?php
@@ -406,15 +411,15 @@
                                     
                                 ?>
                                 <div class="learning-items mt-2">
-                                    <div class="accordion" id="accordionExample">
+                                    <div class="accordion" id="educareFaq">
                                         <?php foreach($educare_homepage_faq_item_settings_decoded as $key => $faq_repeater_item) : ?>
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
+                                            <h2 class="accordion-header">
                                                 <a class="accordion-button collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo 'home_faq_' . $key; ?>" aria-expanded="true" aria-controls="collapseOne">
                                                     <?php echo esc_html( $faq_repeater_item->title ); ?>
                                                 </a>
                                             </h2>
-                                            <div id="<?php echo 'home_faq_' . $key; ?>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div id="<?php echo 'home_faq_' . $key; ?>" class="accordion-collapse collapse" data-bs-parent="#educareFaq">
                                                 <div class="accordion-body">
                                                     <?php echo esc_html( $faq_repeater_item->text ); ?>
                                                 </div>
@@ -549,41 +554,7 @@
         <!-- our-events-close  -->
         <?php
             endif;
-        ?>
-        <!-- testimonial-section-strat  -->
-        <section>
-            <div class="main-container py-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 text-end">
-                            <div class="position-relative testimonial-slider-image-wrapper">
-                            <img src="assets/img/testimonial/man-person-suit-hair-male-portrait-65154-pxhere.com 1.png" alt="">
-                            <img src="assets/img/testimonial/man-person-suit-hair-male-portrait-65154-pxhere.com 1.png" alt="">
-                            <img src="assets/img/testimonial/man-person-suit-hair-male-portrait-65154-pxhere.com 1.png" alt="">
-                            <img src="assets/img/testimonial/man-person-suit-hair-male-portrait-65154-pxhere.com 1.png" alt="">
-                            <img src="assets/img/testimonial/man-person-suit-hair-male-portrait-65154-pxhere.com 1.png" alt="">
-                            <img src="assets/img/testimonial/man-person-suit-hair-male-portrait-65154-pxhere.com 1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="testimonial-qute">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/svg/“.svg" alt="">
-                            </div>
-                            <div class="testimonial-content">
-                            <p>Excellent content and assignments that build on your knowledge, reinforce, and then expand. I recently secured new employment using PHP and couldn't have done so without the Professional Web Development courses.</p>
-                            </div>
-                            <div class="testimonial-person mt-3">
-                            <h5>David Backhome</h5>
-                            <p>Bsc in CSE</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- testimonial-section-close  -->
-
-        <?php
+        
             if(get_theme_mod('educare_show_blog_settings')) :
         ?>
         <!-- news-section-start  -->
