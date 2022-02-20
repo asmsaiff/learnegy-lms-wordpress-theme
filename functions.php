@@ -59,3 +59,6 @@
         wp_enqueue_script( 'main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null, true );
     }
     add_action( 'wp_enqueue_scripts', 'educare_assets_enqueue' );
+
+    remove_filter( 'the_content', 'wpautop');
+    remove_filter( 'the_excerpt', 'wpautop');
