@@ -88,11 +88,11 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon slider-btn" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                <span class="visually-hidden"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                 <span class="carousel-control-next-icon slider-btn" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                <span class="visually-hidden"></span>
             </button>
         </div>
         <!-- hero-section-close  -->
@@ -204,7 +204,9 @@
                                     </div>
                                     <div class="col-md-3 d-flex align-items-center justify-content-center">
                                         <div class="notice-btn-btn d-flex justify-content-end pb-3">
-                                            <a class="notice-btn mt-4" href="<?php the_permalink(); ?>">View Notice</a>
+                                            <a class="notice-btn mt-4" href="<?php the_permalink(); ?>">
+                                                <?php _e('View Notice', 'educare'); ?>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -222,102 +224,78 @@
         <!-- Notice-board-section-close  -->
         <?php
             endif;
+
+            if(get_theme_mod('educare_show_course_settings')) :
         ?>
         <!-- course-saection-start -->
         <section>
             <div class="main-container">
-                <div class="section-header">
-                    <h4>Twinckle</h4>
-                    <h2>Couress We Offer</h2>
+                <div class="section-header pb-0">
+                    <h4>
+                        <?php esc_html_e(get_theme_mod('educare_course_subheading_settings', 'Welcome')); ?>
+                    </h4>
+                    <h2>
+                        <?php esc_html_e(get_theme_mod('educare_course_heading_settings', 'Couress We Offer')); ?>
+                    </h2>
                 </div>
+                <?php
+                    $educare_course = new WP_Query(array(
+                        'category_name'         =>  'course',
+                    ));
+
+                    if($educare_course->post_count >= 1) :
+                ?>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <ul class="courses">
-                            <li class="list" data-filter="all-Courses">All Courses</li>
-                            <li class="list" data-filter="computer">Computer</li>
-                            <li class="list" data-filter="electrical">Electrial</li>
-                            <li class="list" data-filter="physics">Physics</li>
-                            <li class="list" data-filter="bm">B&M</li>
-                            </ul>
                             <div class="courses-items mt-5">
-                            <div class="row">
-                                <div class="col-xl-3 col-md-6 card-items" data-item="computer">
-                                    <div class="card mt-4 course-card computer">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/computer.png" alt="computer-img">
-                                        <h4>Computer</h4>
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                        <div class="d-flex justify-content-between align-items-center course-card-footer">
-                                        <div class="date d-flex">
-                                            <span><i class="far fa-calendar"></i></span>
-                                            <p>2 Month</p>
-                                        </div>
-                                        <div class="read-more d-flex">
-                                            <a href="#">Read More</a>
-                                            <span><i class="fas fa-arrow-right"></i></span>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6 card-items" data-item="electrical">
-                                    <div class="card mt-4 course-card electrical">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/electrical.png" alt="computer-img">
-                                        <h4>Electricale </h4>
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                        <div class="d-flex justify-content-between align-items-center course-card-footer">
-                                        <div class="date d-flex">
-                                            <span><i class="far fa-calendar"></i></span>
-                                            <p>2 Month</p>
-                                        </div>
-                                        <div class="read-more d-flex">
-                                            <a href="#">Read More</a>
-                                            <span><i class="fas fa-arrow-right"></i></span>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-6 card-items" data-item="physics">
-                                    <div class="card mt-4 course-card physics">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/physics.png" alt="computer-img">
-                                        <h4>Physics</h4>
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                        <div class="d-flex justify-content-between align-items-center course-card-footer">
-                                        <div class="date d-flex">
-                                            <span><i class="far fa-calendar"></i></span>
-                                            <p>2 Month</p>
-                                        </div>
-                                        <div class="read-more d-flex">
-                                            <a href="#">Read More</a>
-                                            <span><i class="fas fa-arrow-right"></i></span>
-                                        </div>
+                                <div class="row">
+                                    <?php
+                                        while($educare_course->have_posts()) :
+                                            $educare_course->the_post();
+                                    ?>
+                                    <div class="col-xl-3 col-md-6 card-items" data-item="computer">
+                                        <div class="card mt-4 course-card computer">
+                                            <?php
+                                                if(has_post_thumbnail()) {
+                                                    the_post_thumbnail( 'large', array('class'=>'computer-img h-auto') );
+                                                }
+                                            ?>
+                                            <h4>
+                                                <?php the_title(); ?>
+                                            </h4>
+                                            <p>
+                                                <?php the_excerpt(); ?>
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center course-card-footer">
+                                                <div class="date d-flex">
+                                                    <span><i class="far fa-calendar"></i></span>
+                                                    <p>
+                                                        <?php esc_html(the_field('time_length')); ?>
+                                                    </p>
+                                                </div>
+                                                <div class="read-more d-flex">
+                                                    <a href="<?php the_permalink(); ?>">
+                                                        <?php _e('Read More', 'educare'); ?>
+                                                    </a>
+                                                    <span><i class="fas fa-arrow-right"></i></span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <?php endwhile; ?>
                                 </div>
-                                <div class="col-xl-3 col-md-6 card-items" data-item="business">
-                                    <div class="card mt-4 course-card business">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/courses/bank-balnace.png" alt="computer-img">
-                                        <h4>Business Management</h4>
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                        <div class="d-flex justify-content-between align-items-center course-card-footer">
-                                        <div class="date d-flex">
-                                            <span><i class="far fa-calendar"></i></span>
-                                            <p>2 Month</p>
-                                        </div>
-                                        <div class="read-more d-flex">
-                                            <a href="#">Read More</a>
-                                            <span><i class="fas fa-arrow-right"></i></span>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </section>
         <!-- course-section-close  -->
+        <?php
+            endif;
+        ?>
         <!-- expaer-teacher-section-start  -->
         <section class="teacher-section">
             <div class="main-container">
