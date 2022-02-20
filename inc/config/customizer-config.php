@@ -44,6 +44,7 @@
         require_once get_template_directory() . '/inc/option-panel/op-info.php';
         require_once get_template_directory() . '/inc/option-panel/op-notice.php';
         require_once get_template_directory() . '/inc/option-panel/op-course.php';
+        require_once get_template_directory() . '/inc/option-panel/op-teacher.php';
     }
 
     add_action( 'customize_register', 'pe_customize_register' );

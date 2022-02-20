@@ -295,77 +295,89 @@
         <!-- course-section-close  -->
         <?php
             endif;
+
+            if(get_theme_mod('educare_show_teacher_settings')) :
         ?>
         <!-- expaer-teacher-section-start  -->
         <section class="teacher-section">
             <div class="main-container">
-                <div class="section-header">
-                    <h4>Twinckle</h4>
-                    <h2>Expert Teachers</h2>
+                <div class="section-header pb-0">
+                    <h4>
+                        <?php esc_html_e(get_theme_mod('educare_teacher_subheading_settings', 'Welcome')); ?>
+                    </h4>
+                    <h2>
+                        <?php esc_html_e(get_theme_mod('educare_teacher_heading_settings', 'Expert Teachers')); ?>
+                    </h2>
                 </div>
+                <?php
+                    $educare_teacher = new WP_Query(array(
+                        'category_name'         =>  'teacher',
+                    ));
+
+                    if($educare_teacher->post_count >= 1) :
+                ?>
                 <div class="container">
                     <div class="row">
+                        <?php
+                            while($educare_teacher->have_posts()) :
+                                $educare_teacher->the_post();
+                        ?>
                         <div class="col-xl-3 col-md-6">
                             <div class="card mt-4 teacher-info">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-01.png" alt="teacher">
-                            <div class="teacher-details">
-                                <h2>Roshan Bhula</h2>
-                                <p>Toddler Teacher</p>
-                            </div>
-                            <div class="social-icon">
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card mt-4 teacher-info">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-02.png" alt="teacher">
-                            <div class="teacher-details">
-                                <h2>Roshan Bhula</h2>
-                                <p>Toddler Teacher</p>
-                            </div>
-                            <div class="social-icon">
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card mt-4 teacher-info">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-03.png" alt="teacher">
-                            <div class="teacher-details">
-                                <h2>Roshan Bhula</h2>
-                                <p>Toddler Teacher</p>
-                            </div>
-                            <div class="social-icon">
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card mt-4 teacher-info">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/teacher/teacher-04.png" alt="teacher">
-                            <div class="teacher-details">
-                                <h2>Roshan Bhula</h2>
-                                <p>Toddler Teacher</p>
-                            </div>
-                            <div class="social-icon">
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
+                                <?php
+                                    if(has_post_thumbnail()) {
+                                        the_post_thumbnail('large', array('class'=>'h-auto'));
+                                    }
+                                ?>
+                                <div class="teacher-details">
+                                    <h2><?php the_title(); ?></h2>
+                                    <p><?php the_content(); ?></p>
+                                </div>
+                                <div class="social-icon">
+                                    <?php
+                                        $t_fb = get_field('facebook');
+                                        if($t_fb['show'] == true) :
+                                    ?>
+                                    <a href="<?php echo esc_url( $t_fb['flink'] ); ?>">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <?php
+                                        endif;
+
+                                        $t_twitter = get_field('twitter');
+                                        if($t_twitter['t_show'] == true) :
+                                    ?>
+                                    <a href="<?php echo esc_url( $t_twitter['tlink'] ); ?>"><i class="fab fa-twitter"></i></a>
+                                    <?php
+                                        endif;
+
+                                        $t_linkedin = get_field('linkedin');
+                                        if($t_linkedin['l_show'] == true) :
+                                    ?>
+                                    <a href="<?php echo esc_url( $t_linkedin['llink'] ); ?>"><i class="fab fa-linkedin"></i></a>
+                                    <?php
+                                        endif;
+
+                                        $t_instagram = get_field('instagram');
+                                        if($t_instagram['i_show'] == true) :
+                                    ?>
+                                    <a href="<?php echo esc_url( $t_instagram['ilink'] ); ?>"><i class="fab fa-instagram"></i></a>
+                                    <?php
+                                        endif;
+                                    ?>
+                                </div>
                             </div>
                         </div>
+                        <?php endwhile; ?>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </section>
         <!-- expaer-teacher-section-close  -->
+        <?php
+            endif;
+        ?>
         <!-- learning-section-start  -->
         <section>
             <div class="main-container">
