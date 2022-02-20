@@ -582,89 +582,71 @@
             </div>
         </section>
         <!-- testimonial-section-close  -->
+
+        <?php
+            if(get_theme_mod('educare_show_blog_settings')) :
+        ?>
         <!-- news-section-start  -->
         <section class="news-section">
             <div class="main-container">
                 <div class="section-header">
-                    <h4>Discover Your Perfect</h4>
-                    <h2>Latest News </h2>
+                    <h4>
+                        <?php echo esc_html(get_theme_mod('educare_blog_subheading_settings', 'Discover Your Perfect')); ?>
+                    </h4>
+                    <h2><?php echo esc_html(get_theme_mod('educare_blog_heading_settings', 'Latest News')); ?></h2>
                 </div>
+                
+                <?php
+                    $educare_posts = new WP_Query(array(
+                        'category_name'         =>  'blog',
+                        'posts_per_page'        =>  3,
+                    ));
+
+                    if($educare_posts->post_count > 0) :
+                ?>
                 <div class="container">
                     <div class="row">
+                        <?php
+                            while($educare_posts->have_posts()) :
+                                $educare_posts->the_post();
+                        ?>
                         <div class="col-xl-4 col-md-6">
                             <div class="card news-card mt-4">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/news-01.png" alt="news-img">
-                            <div class="event-header d-flex justify-content-between">
-                                <div class="event-address d-flex">
-                                    <span><i class="fas fa-globe-europe"></i></span>
-                                    <p>Auditorium Lagoon</p>
+                                <?php
+                                    if(has_post_thumbnail()) {
+                                        the_post_thumbnail('large', array('class'=>'img-fluid h-auto'));
+                                    }
+                                ?>
+                                <div class="event-header d-flex justify-content-between">
+                                    <div class="event-address d-flex">
+                                        <span><i class="fas fa-globe-europe"></i></span>
+                                        <p>Algolia</p>
+                                    </div>
+                                    <div class="event-date d-flex">
+                                        <span><i class="far fa-calendar"></i></span>
+                                        <p><?php echo get_the_date(); ?></p>
+                                    </div>
                                 </div>
-                                <div class="event-date d-flex">
-                                    <span><i class="far fa-calendar"></i></span>
-                                    <p>February 19, 2015</p>
+                                <div class="news-title">
+                                    <h4><?php the_title(); ?></h4>
+                                    <p class="mt-3"><?php the_excerpt(); ?></p>
                                 </div>
-                            </div>
-                            <div class="news-title">
-                                <h4>Ultimate University Conference</h4>
-                                <p class="mt-3">I must explain to you how all this mistaken idea of denoung  the system.</p>
-                            </div>
-                            <div class="news-read-more mt-2">
-                                <a href="#">Read More</a>
-                                <span><i class="fas fa-arrow-right"></i></span>
-                            </div>
+                                <div class="news-read-more mt-2">
+                                    <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'educare'); ?></a>
+                                    <span><i class="fas fa-arrow-right"></i></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card news-card mt-4">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/news-02.png" alt="news-img">
-                            <div class="event-header d-flex justify-content-between">
-                                <div class="event-address d-flex">
-                                    <span><i class="fas fa-globe-europe"></i></span>
-                                    <p>Auditorium Lagoon</p>
-                                </div>
-                                <div class="event-date d-flex">
-                                    <span><i class="far fa-calendar"></i></span>
-                                    <p>February 19, 2015</p>
-                                </div>
-                            </div>
-                            <div class="news-title">
-                                <h4>Ultimate University Conference</h4>
-                                <p class="mt-3">I must explain to you how all this mistaken idea of denoung  the system.</p>
-                            </div>
-                            <div class="news-read-more mt-2">
-                                <a href="#">Read More</a>
-                                <span><i class="fas fa-arrow-right"></i></span>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="card news-card mt-4">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/blog/news-03.png" alt="news-img">
-                            <div class="event-header d-flex justify-content-between">
-                                <div class="event-address d-flex">
-                                    <span><i class="fas fa-globe-europe"></i></span>
-                                    <p>Auditorium Lagoon</p>
-                                </div>
-                                <div class="event-date d-flex">
-                                    <span><i class="far fa-calendar"></i></span>
-                                    <p>February 19, 2015</p>
-                                </div>
-                            </div>
-                            <div class="news-title">
-                                <h4>Ultimate University Conference</h4>
-                                <p class="mt-3">I must explain to you how all this mistaken idea of denoung  the system.</p>
-                            </div>
-                            <div class="news-read-more mt-2">
-                                <a href="#">Read More</a>
-                                <span><i class="fas fa-arrow-right"></i></span>
-                            </div>
-                            </div>
-                        </div>
+                        <?php endwhile; ?>
                     </div>
                 </div>
+                <?php endif; ?>
             </div>
         </section>
         <!-- news-section-close  -->
+        <?php
+            endif;
+        ?>
 
         <!-- Our Newsletter-start  -->
         <section class="p-0">
