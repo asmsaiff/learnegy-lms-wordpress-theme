@@ -43,8 +43,7 @@
 
     function educare_assets_enqueue() {
         // CSS Enqueue
-        wp_enqueue_style('gFont-one', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,800;1,300;1,400;1,600;1,700;1,800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-        wp_enqueue_style('gFont-two', 'https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,800;1,300;1,400;1,600;1,700;1,800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+        wp_enqueue_style('google-font', '//fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         wp_enqueue_style( 'fontawesome-css', get_template_directory_uri().'/assets/css/all.css');
         wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
         wp_enqueue_style( 'theme-style-css', get_template_directory_uri().'/assets/css/style.css');
