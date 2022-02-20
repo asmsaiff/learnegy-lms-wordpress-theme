@@ -433,6 +433,8 @@
         <!-- learning-section-close  -->
         <?php
             endif;
+
+            if(get_theme_mod('educare_show_event_settings')) :
         ?>
         <!-- our-event-strat  -->
         <section class="event">
@@ -440,139 +442,114 @@
                 <div class="container">
                     <div class="section-header-wrapper d-flex justify-content-between">
                         <div class="section-header-title">
-                            <p>Our Recent</p>
-                            <h2>Events</h2>
+                            <p>
+                                <?php
+                                    echo esc_html( get_theme_mod('educare_event_subheading_settings', 'Our Recent') );
+                                ?>
+                            </p>
+                            <h2>
+                                <?php
+                                    echo esc_html( get_theme_mod('educare_event_heading_settings', 'Events') );
+                                ?>
+                            </h2>
                         </div>
+                        <?php
+                            if(get_theme_mod('educare_show_event_btn_settings')) :
+                        ?>
                         <div class="details-btn-wrapper">
-                            <a class="view-btn" href="#">view all</a>
+                            <a class="view-btn" href="<?php echo esc_url(get_theme_mod('educare_event_btn_link_settings')); ?>">
+                                <?php echo esc_html(get_theme_mod('educare_event_btn_label_settings', 'See More')); ?>
+                            </a>
                         </div>
+                        <?php
+                            endif;
+                        ?>
                     </div>
+                    <?php
+                        $educare_event = new WP_Query(array(
+                            'category_name'         =>  'event'
+                        ));
+
+                        if($educare_event->post_count >= 1) :
+                    ?>
                     <div class="row mt-5">
+                        <?php
+                            while($educare_event->have_posts()) :
+                                $educare_event->the_post();
+                        ?>
                         <div class="col-md-6">
                             <div class="card mt-4 event-card">
-                            <div class="row">
-                                <div class="col-xl-4 col-md-12 text-md-center">
-                                    <div class="event-img text-center">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-1.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-12">
-                                    <div class="event-header d-flex justify-content-between">
-                                        <div class="event-address d-flex">
-                                        <span><i class="fas fa-globe-europe"></i></span>
-                                        <p>Auditorium Lagoon</p>
-                                        </div>
-                                        <div class="event-date d-flex">
-                                        <span><i class="far fa-calendar"></i></span>
-                                        <p>February 19, 2015</p>
+                                <div class="row">
+                                    <div class="col-xl-4 col-md-12 text-md-center">
+                                        <div class="event-img text-center">
+                                            <?php
+                                                if(has_post_thumbnail()) {
+                                                    the_post_thumbnail();
+                                                }
+                                            ?>
                                         </div>
                                     </div>
-                                    <div class="event-card-title">
-                                        <h5>Ultimate University Conference</h5>
+                                    <div class="col-xl-8 col-md-12">
+                                        <div class="event-header d-flex justify-content-between">
+                                            <?php
+                                                $event_meta = get_field('event_information');
+
+                                                if($event_meta['place_location_auditorium']) :
+                                            ?>
+                                            <div class="event-address d-flex">
+                                                <span><i class="fas fa-globe-europe"></i></span>
+                                                <p>
+                                                    <?php
+                                                        echo esc_html($event_meta['place_location_auditorium']);
+                                                    ?>
+                                                </p>
+                                            </div>
+                                            <?php
+                                                endif;
+
+                                                if($event_meta['event_date_time']) :
+                                            ?>
+                                            <div class="event-date d-flex">
+                                                <span><i class="far fa-calendar"></i></span>
+                                                <p>
+                                                    <?php
+                                                        echo esc_html($event_meta['event_date_time']);
+                                                    ?>
+                                                </p>
+                                            </div>
+                                            <?php
+                                                endif;
+                                            ?>
+                                        </div>
+                                        <div class="event-card-title">
+                                            <h5>
+                                                <?php the_title(); ?>
+                                            </h5>
+                                        </div>
+                                        <div class="event-card-info">
+                                            <p>
+                                                <?php the_excerpt(); ?>
+                                            </p>
+                                        </div>
+                                        <a class="event-view-details mt-2" href="<?php the_permalink(); ?>">
+                                            <?php _e('View Details', 'educare'); ?>
+                                        </a>
                                     </div>
-                                    <div class="event-card-info">
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                    </div>
-                                    <a class="event-view-details mt-2" href="#">View  Details</a>
                                 </div>
-                            </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="card mt-4 event-card">
-                            <div class="row">
-                                <div class="col-xl-4 col-md-12 text-md-center">
-                                    <div class="event-img text-center">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-2.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-12">
-                                    <div class="event-header d-flex justify-content-between">
-                                        <div class="event-address d-flex">
-                                        <span><i class="fas fa-globe-europe"></i></span>
-                                        <p>Auditorium Lagoon</p>
-                                        </div>
-                                        <div class="event-date d-flex">
-                                        <span><i class="far fa-calendar"></i></span>
-                                        <p>February 19, 2015</p>
-                                        </div>
-                                    </div>
-                                    <div class="event-card-title">
-                                        <h5>Ultimate University Conference</h5>
-                                    </div>
-                                    <div class="event-card-info">
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                    </div>
-                                    <a class="event-view-details mt-2" href="#">View  Details</a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card mt-4 event-card">
-                            <div class="row">
-                                <div class="col-xl-4 col-md-12 text-md-center">
-                                    <div class="event-img text-center">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-3.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-12">
-                                    <div class="event-header d-flex justify-content-between">
-                                        <div class="event-address d-flex">
-                                        <span><i class="fas fa-globe-europe"></i></span>
-                                        <p>Auditorium Lagoon</p>
-                                        </div>
-                                        <div class="event-date d-flex">
-                                        <span><i class="far fa-calendar"></i></span>
-                                        <p>February 19, 2015</p>
-                                        </div>
-                                    </div>
-                                    <div class="event-card-title">
-                                        <h5>Ultimate University Conference</h5>
-                                    </div>
-                                    <div class="event-card-info">
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                    </div>
-                                    <a class="event-view-details mt-2" href="#">View  Details</a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card mt-4 event-card">
-                            <div class="row">
-                                <div class="col-xl-4 col-md-12 text-md-center">
-                                    <div class="event-img text-center">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/event/event-4.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-12">
-                                    <div class="event-header d-flex justify-content-between">
-                                        <div class="event-address d-flex">
-                                        <span><i class="fas fa-globe-europe"></i></span>
-                                        <p>Auditorium Lagoon</p>
-                                        </div>
-                                        <div class="event-date d-flex">
-                                        <span><i class="far fa-calendar"></i></span>
-                                        <p>February 19, 2015</p>
-                                        </div>
-                                    </div>
-                                    <div class="event-card-title">
-                                        <h5>Ultimate University Conference</h5>
-                                    </div>
-                                    <div class="event-card-info">
-                                        <p>Our set he for firmament morning sixth subdue today .</p>
-                                    </div>
-                                    <a class="event-view-details mt-2" href="#">View  Details</a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+                        <?php endwhile; ?>
                     </div>
+                    <?php
+                        endif;
+                    ?>
                 </div>
             </div>
         </section>
         <!-- our-events-close  -->
+        <?php
+            endif;
+        ?>
         <!-- testimonial-section-strat  -->
         <section>
             <div class="main-container py-5">
