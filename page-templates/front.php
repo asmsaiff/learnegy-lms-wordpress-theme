@@ -614,7 +614,7 @@
                             <div class="card news-card mt-4">
                                 <?php
                                     if(has_post_thumbnail()) {
-                                        the_post_thumbnail('large', array('class'=>'img-fluid h-auto'));
+                                        the_post_thumbnail('large', array('class'=>'img-fluid w-100 h-auto'));
                                     }
                                 ?>
                                 <div class="event-header d-flex justify-content-between">
@@ -646,6 +646,8 @@
         <!-- news-section-close  -->
         <?php
             endif;
+
+            if(get_theme_mod('educare_show_newsletter_settings')) :
         ?>
 
         <!-- Our Newsletter-start  -->
@@ -656,18 +658,19 @@
                         <div class="col-md-12">
                             <div class="news-letter">
                             <div class="news-letter-header">
-                                <h4>Subscribe</h4>
-                                <h2 class="text-white">Our Newsletter</h2>
-                                <p class="text-white">Your Download Should Start Automatically, If Not Click Here. Should I Give Up, Huh?.</p>
+                                <h4>
+                                    <?php echo esc_html(get_theme_mod('educare_newsletter_subheading_settings', 'Subscribe')); ?>
+                                </h4>
+                                <h2 class="text-white">
+                                    <?php echo esc_html(get_theme_mod('educare_newsletter_heading_settings', 'Our Newsletter')); ?>
+                                </h2>
+                                <p class="text-white">
+                                    <?php echo esc_html(get_theme_mod('educare_newsletter_desc_settings')); ?>
+                                </p>
                             </div>
-                            
-                                <form action="#">
-                                    <div class="d-flex justify-content-center align-items-center mt-5">
-                                        <input placeholder="Enter your email" class="news-letter-input" type="text">
-                                        <input class="subscribe-btn" type="submit" value="Subscribe">
-                                    </div>
-                                </form>
-                            
+                                <?php
+                                    do_shortcode( esc_html(get_theme_mod('educare_newsletter_form_settings')));
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -675,6 +678,7 @@
             </div>
         </section>
         <!-- Our Newsletter-close  -->
+        <?php endif; ?>
     </main>
       
 <?php
