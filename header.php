@@ -10,45 +10,50 @@
 <body>
     <!-- header-start  -->
     <header>
+        <?php
+            if(get_theme_mod('educare_show_topbar_settings')) :
+        ?>
         <!-- top-header-strat  -->
         <div class="main-container top-header">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="row">
-                        <div class="col-5 address">
-                            <div class="top-header-items">
-                                <span><i class="fas fa-home"></i></span>
-                                <p>Mirpur , Dhaka, Bangladesh</p>
+                            <div class="col-5 address">
+                                <div class="top-header-items">
+                                    <span><i class="fas fa-home"></i></span>
+                                    <p>Mirpur , Dhaka, Bangladesh</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-3 phone">
-                            <a href="#" class="top-header-phone top-header-items">
-                                <span><i class="fas fa-phone"></i></span>
-                                <p>39885677834390</p>
-                            </a>
-                        </div>
-                        <div class="col-2 gmail">
-                            <a href="#" class="top-header-mail top-header-items">
-                                <span><i class="far fa-envelope"></i></span>
-                                <p>Info@gmail.com</p>
-                            </a>
-                        </div>
+                            <div class="col-3 phone">
+                                <a href="#" class="top-header-phone top-header-items">
+                                    <span><i class="fas fa-phone"></i></span>
+                                    <p>39885677834390</p>
+                                </a>
+                            </div>
+                            <div class="col-2 gmail">
+                                <a href="#" class="top-header-mail top-header-items">
+                                    <span><i class="far fa-envelope"></i></span>
+                                    <p>Info@gmail.com</p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="header-side-btn">
-                        <div class="d-flex justify-content-end">
-                            <div class="login-btn header-btn">
-                                <a class="login" href="#"><i class="fas fa-sign-in-alt"></i>Admission</a>
+                            <div class="d-flex justify-content-end">
+                                <div class="login-btn header-btn">
+                                    <a class="login" href="#"><i class="fas fa-sign-in-alt"></i>Admission</a>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- top-header-close  -->
+        <?php endif; ?>
+
         <!-- nav-bar-start  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 sticky-top shadow-sm">
             <div class="container-xl sticky-top">
