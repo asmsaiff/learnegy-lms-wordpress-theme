@@ -154,197 +154,75 @@
         <!-- information-section-close  -->
         <?php
             endif;
+
+            if(get_theme_mod('educare_show_home_notice_settings')) :
         ?>
         <!-- Notice-board-section-start  -->
         <section class="notice-board">
             <div class="main-container p-3">
                 <div class="section-header">
-                    <h4>Update Notice</h4>
-                    <h2>Notice Board</h2>
+                    <h4>
+                        <?php echo get_theme_mod('educare_homepage_notice_subheading_settings', 'Update Notice'); ?>
+                    </h4>
+                    <h2>
+                        <?php echo get_theme_mod('educare_homepage_notice_heading_settings', 'Notice Board'); ?>
+                    </h2>
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-6">
-                            <div class="row">
-                            <div class="col-xl-11 notice-card">
+                        <?php
+                            $educare_notice = new WP_Query(array(
+                                'category_name'         =>  'notice'
+                            ));
+
+                            if($educare_notice->post_count >= 1) :
+                                while($educare_notice->have_posts()) :
+                                    $educare_notice->the_post();
+                        ?>
+                        <div class="col-xl-6 mt-2">
+                            <div class="notice-card overflow-hidden">
                                 <div class="row justify-content-between">
                                     <div class="notice-date d-flex justify-content-center align-items-center col-md-1 p-0">
                                         <div class="p-3 text-center">
-                                        <p>21</p>
-                                        <p>Jan</p>
+                                            <i class="fa fa-bell fs-2 ps-3" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-8">
-                                        <h5 class="pt-4">Admission going on for Spring-2021</h5>
-                                        <div class="d-flex notice-footer justify-content-between">
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>11:21 AM</p>
-                                        </div>
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>Admission</p>
-                                        </div>
+                                        <h5 class="pt-4">
+                                            <?php the_title(); ?>
+                                        </h5>
+                                        <div class="d-flex notice-footer gap-3">
+                                            <div class="time d-flex">
+                                                <span><i class="far fa-clock"></i></span>
+                                                <p><?php the_field('date_time'); ?></p>
+                                            </div>
+                                            <div class="time d-flex">
+                                                <span><i class="far fa-clock"></i></span>
+                                                <p><?php the_field('en_category'); ?></p>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-3 d-flex align-items-center justify-content-center">
                                         <div class="notice-btn-btn d-flex justify-content-end pb-3">
-                                        <a class="notice-btn mt-4" href="#">View Notice</a>
+                                            <a class="notice-btn mt-4" href="<?php the_permalink(); ?>">View Notice</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-11 notice-card">
-                                <div class="row justify-content-between">
-                                    <div class="notice-date d-flex justify-content-center align-items-center col-md-1 p-0">
-                                        <div class="p-3 text-center">
-                                        <p>21</p>
-                                        <p>Jan</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h5 class="pt-4">Admission going on for Spring-2021</h5>
-                                        <div class="d-flex notice-footer justify-content-between">
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>11:21 AM</p>
-                                        </div>
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>Admission</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 d-flex align-items-center justify-content-center">
-                                        <div class="notice-btn-btn d-flex justify-content-end pb-3">
-                                        <a class="notice-btn mt-4" href="#">View Notice</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-11 notice-card">
-                                <div class="row justify-content-between">
-                                    <div class="notice-date d-flex justify-content-center align-items-center col-md-1 p-0">
-                                        <div class="p-3 text-center">
-                                        <p>21</p>
-                                        <p>Jan</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h5 class="pt-4">Admission going on for Spring-2021</h5>
-                                        <div class="d-flex notice-footer justify-content-between">
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>11:21 AM</p>
-                                        </div>
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>Admission</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 d-flex align-items-center justify-content-center">
-                                        <div class="notice-btn-btn d-flex justify-content-end pb-3">
-                                        <a class="notice-btn mt-4" href="#">View Notice</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             </div>
                         </div>
-                        <div class="col-xl-6">
-                            <div class="row">
-                            <div class="col-xl-11 notice-card">
-                                <div class="row justify-content-between">
-                                    <div class="notice-date d-flex justify-content-center align-items-center col-md-1 p-0">
-                                        <div class="p-3 text-center">
-                                        <p>21</p>
-                                        <p>Jan</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h5 class="pt-4">Admission going on for Spring-2021</h5>
-                                        <div class="d-flex notice-footer justify-content-between">
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>11:21 AM</p>
-                                        </div>
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>Admission</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 d-flex align-items-center justify-content-center">
-                                        <div class="notice-btn-btn d-flex justify-content-end pb-3">
-                                        <a class="notice-btn mt-4" href="#">View Notice</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-11 notice-card">
-                                <div class="row justify-content-between">
-                                    <div class="notice-date d-flex justify-content-center align-items-center col-md-1 p-0">
-                                        <div class="p-3 text-center">
-                                        <p>21</p>
-                                        <p>Jan</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h5 class="pt-4">Admission going on for Spring-2021</h5>
-                                        <div class="d-flex notice-footer justify-content-between">
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>11:21 AM</p>
-                                        </div>
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>Admission</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 d-flex align-items-center justify-content-center">
-                                        <div class="notice-btn-btn d-flex justify-content-end pb-3">
-                                        <a class="notice-btn mt-4" href="#">View Notice</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-11 notice-card">
-                                <div class="row justify-content-between">
-                                    <div class="notice-date d-flex justify-content-center align-items-center col-md-1 p-0">
-                                        <div class="p-3 text-center">
-                                        <p>21</p>
-                                        <p>Jan</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h5 class="pt-4">Admission going on for Spring-2021</h5>
-                                        <div class="d-flex notice-footer justify-content-between">
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>11:21 AM</p>
-                                        </div>
-                                        <div class="time d-flex">
-                                            <span><i class="far fa-clock"></i></span>
-                                            <p>Admission</p>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 d-flex align-items-center justify-content-center">
-                                        <div class="notice-btn-btn d-flex justify-content-end pb-3">
-                                        <a class="notice-btn mt-4" href="#">View Notice</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+                        <?php
+                                endwhile;
+                            endif;
+                            wp_reset_query();
+                        ?>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Notice-board-section-close  -->
+        <?php
+            endif;
+        ?>
         <!-- course-saection-start -->
         <section>
             <div class="main-container">
