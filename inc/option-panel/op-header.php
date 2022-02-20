@@ -94,7 +94,7 @@
         'sanitize_callback' => 'sanitize_text_field'
     ));
     $wp_customize->add_control('educare_show_topbar_right_btn_link_ctrl', array(
-        'label'             =>  __('Button Label', 'educare'),
+        'label'             =>  __('Button Link', 'educare'),
         'section'           =>  'educare_topbar',
         'settings'          =>  'educare_show_topbar_right_btn_link_settings',
         'type'              =>  'text'
