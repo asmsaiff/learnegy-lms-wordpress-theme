@@ -96,58 +96,55 @@
             </button>
         </div>
         <!-- hero-section-close  -->
-        <?php endif; wp_reset_query(); ?>
+        <?php 
+            endif;
+            wp_reset_query();
+
+            if(get_theme_mod('educare_show_home_info_settings')) :
+        ?>
 
         <!-- information-section  -->
         <section>
             <div class="main-container">
                 <div class="container">
                     <div class="section-header">
-                        <h4>Welcome</h4>
-                        <h2>Twinkle School & College</h2>
-                        <p>Our set he for firmament morning sixth subdue today the darkness creeping gathered divide our let god moving today.</p>
+                        <h4>
+                            <?php echo esc_html( get_theme_mod('educare_homepage_info_subheading_settings', 'Welcome') ); ?>
+                        </h4>
+                        <h2><?php echo esc_html( get_theme_mod('educare_homepage_info_heading_settings', 'Educare School & College') ); ?></h2>
+                        <p><?php echo esc_html( get_theme_mod('educare_homepage_info_desc_settings') ); ?></p>
                     </div>
                     <div class="row align-items-center">
                         <div class="col-xl-6">
+                            <?php
+                                $educare_homepage_info_item_settings = get_theme_mod('educare_homepage_info_item_settings');
+                                $educare_homepage_info_item_settings_decoded = json_decode($educare_homepage_info_item_settings);
+
+                                if(!empty($educare_homepage_info_item_settings_decoded)) :
+                                
+                            ?>
                             <aside>
-                            <div class="aside-box">
-                                <div class="row align-items-center">
-                                    <div class="aside-icon col-md-2 col-sm-12 text-center">
-                                        <span><i class="far fa-check-square fa-3x"></i></span>
-                                    </div>
-                                    <div class="aside-text col-md-10">
-                                        <h2>Inter School Sports</h2>
-                                        <p>The words you use in your written communica speak volumes. </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="aside-box">
-                                <div class="row align-items-center">
-                                    <div class="aside-icon col-md-2 col-sm-12 text-center">
-                                        <span><i class="far fa-check-square fa-3x"></i></span>
-                                    </div>
-                                    <div class="aside-text col-md-10">
-                                        <h2>Multimedia Class</h2>
-                                        <p>The words you use in your written communica speak volumes. </p>
+                                <?php foreach($educare_homepage_info_item_settings_decoded as $info_repeater_item) : ?>
+                                <div class="aside-box">
+                                    <div class="row align-items-center">
+                                        <div class="aside-icon col-md-2 col-sm-12 text-center">
+                                            <span><i class="far fa-check-square fa-3x"></i></span>
+                                        </div>
+                                        <div class="aside-text col-md-10">
+                                            <h2><?php echo $info_repeater_item->title; ?></h2>
+                                            <p>
+                                                <?php echo $info_repeater_item->text; ?>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="aside-box">
-                                <div class="row align-items-center">
-                                    <div class="aside-icon col-md-2 col-sm-12 text-center">
-                                        <span><i class="far fa-check-square fa-3x"></i></span>
-                                    </div>
-                                    <div class="aside-text col-md-10">
-                                        <h2>Multimedia Class</h2>
-                                        <p>The words you use in your written communica speak volumes. </p>
-                                    </div>
-                                </div>
-                            </div>
+                                <?php endforeach; ?>
                             </aside>
+                            <?php endif; ?>
                         </div>
                         <div class="col-xl-6">
                             <div class="d-flex justify-content-center align-items-center">
-                            <img class="about-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/content-img/about-us.png" alt="">
+                                <img class="about-img" src="<?php echo esc_url(get_theme_mod('educare_homepage_info_featured_image_settings')); ?>" alt="">
                             </div>
                         </div>
                     </div>
@@ -155,6 +152,9 @@
             </div>
         </section>
         <!-- information-section-close  -->
+        <?php
+            endif;
+        ?>
         <!-- Notice-board-section-start  -->
         <section class="notice-board">
             <div class="main-container p-3">
