@@ -377,6 +377,8 @@
         <!-- expaer-teacher-section-close  -->
         <?php
             endif;
+
+            if(get_theme_mod('educare_show_home_faq_settings')) :
         ?>
         <!-- learning-section-start  -->
         <section>
@@ -384,78 +386,44 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-6 mb-5 d-flex justify-content-center align-items-center">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/content-img/learning-img.png" alt="learning-img">
+                            <img src="<?php echo esc_url(get_theme_mod('educare_homepage_faq_featured_image_settings')); ?>" alt="">
                         </div>
                         <div class="col-xl-6 d-flex justify-content-center align-items-center">
                             <div class="learning-wrapper">
-                            <div class="learning-title">
-                                <p>Distance Learning</p>
-                                <h2>Flexible Study at Your Own Pace, According to Your Own Needs</h2>
-                            </div>
-                            <div class="learning-items mt-2">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingOne">
-                                        <a class="accordion-button collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Who is a digital business card suitable for?
-                                        </a>
-                                        </h2>
-                                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ratione iusto, perferendis aut deleniti voluptatem eligendi ut velit veniam distinctio animi tenetur soluta dolor sint voluptas quidem in, assumenda incidunt?
+                                <div class="learning-title">
+                                    <p>
+                                        <?php echo get_theme_mod('educare_homepage_faq_subheading_settings', 'Distance Learning'); ?>
+                                    </p>
+                                    <h2>
+                                        <?php echo get_theme_mod('educare_homepage_faq_heading_settings'); ?>
+                                    </h2>
+                                </div>
+                                <?php
+                                    $educare_homepage_faq_item_settings = get_theme_mod('educare_homepage_faq_item_settings');
+                                    $educare_homepage_faq_item_settings_decoded = json_decode($educare_homepage_faq_item_settings);
+
+                                    if(!empty($educare_homepage_faq_item_settings_decoded)) :
+                                    
+                                ?>
+                                <div class="learning-items mt-2">
+                                    <div class="accordion" id="accordionExample">
+                                        <?php foreach($educare_homepage_faq_item_settings_decoded as $key => $faq_repeater_item) : ?>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <a class="accordion-button collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#<?php echo 'home_faq_' . $key; ?>" aria-expanded="true" aria-controls="collapseOne">
+                                                    <?php echo esc_html( $faq_repeater_item->title ); ?>
+                                                </a>
+                                            </h2>
+                                            <div id="<?php echo 'home_faq_' . $key; ?>" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <?php echo esc_html( $faq_repeater_item->text ); ?>
+                                                </div>
+                                            </div>
                                         </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingTwo">
-                                        <a class="accordion-button collapsed collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Do I have to create the card myself?
-                                        </a>
-                                        </h2>
-                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio officiis voluptatibus, quia repellat provident sunt ullam quis expedita omnis consequuntur nisi architecto eos ipsa voluptatum delectus aspernatur quod molestias est?
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingThree">
-                                        <a class="accordion-button collapsed collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Who is a digital business card suitable for?
-                                        </a>
-                                        </h2>
-                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti fuga magni perspiciatis unde expedita corporis est doloribus magnam laudantium et officiis voluptate, sint excepturi, temporibus quis animi nisi debitis.
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingfour">
-                                        <a class="accordion-button collapsed collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Who is a digital business card suitable for?
-                                        </a>
-                                        </h2>
-                                        <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti fuga magni perspiciatis unde expedita corporis est doloribus magnam laudantium et officiis voluptate, sint excepturi, temporibus quis animi nisi debitis.
-                                        </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="headingfive">
-                                        <a class="accordion-button collapsed collapse-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Who is a digital business card suitable for?
-                                        </a>
-                                        </h2>
-                                        <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti fuga magni perspiciatis unde expedita corporis est doloribus magnam laudantium et officiis voluptate, sint excepturi, temporibus quis animi nisi debitis.
-                                        </div>
-                                        </div>
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
-                            </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
@@ -463,6 +431,9 @@
             </div>
         </section>
         <!-- learning-section-close  -->
+        <?php
+            endif;
+        ?>
         <!-- our-event-strat  -->
         <section class="event">
             <div class="main-container">
