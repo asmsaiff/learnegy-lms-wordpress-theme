@@ -1,7 +1,5 @@
 <?php
     get_header();
-
-    if(have_posts()) :
 ?>
 
     <main id="content">
@@ -80,5 +78,4 @@
     </main>
 
 <?php
-    endif;
     get_footer();
