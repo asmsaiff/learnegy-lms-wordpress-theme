@@ -46,8 +46,9 @@
 
                                         <div class="hero-btn-grp">
                                             <a class="contact-btn"
-                                                href="<?php echo esc_url($educare_home_slider_post_data[0]['permalink']) ?>">Read
-                                                More</a>
+                                                href="<?php echo esc_url($educare_home_slider_post_data[0]['permalink']) ?>">
+                                                <?php _e('Read More', 'educare'); ?>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
