@@ -2,7 +2,7 @@
     get_header();
 ?>
 
-<main>
+<main id="content">
     <!-- single-event-details-start -->
     <section>
         <!-- single-coureses-start-second  -->

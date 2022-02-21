@@ -19,7 +19,7 @@ Take it for a spin! See how EduCare elevates your portfolio, business website, o
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in EduCare in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Navigate to 'EduCare Options' in WordPress admin area customize to your taste. You can add contents on page from the advanced option panel there.
+4. Navigate to Customizer in WordPress admin area customize to your taste. You can add contents on page from the advanced option panel there.
 
 == Privacy ==
 EduCare uses LocalStorage to save the setting when Dark Mode support is turned on or off.

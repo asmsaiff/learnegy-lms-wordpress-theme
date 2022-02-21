@@ -4,7 +4,7 @@
     if(have_posts()) :
 ?>
 
-    <main>
+    <main id="content">
         <!-- blog-section-start  -->
         <section>
             <div class="main-container">
