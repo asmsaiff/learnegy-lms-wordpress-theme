@@ -16,7 +16,7 @@
                                     while(have_posts()) :
                                         the_post();
                                 ?>
-                                    <div class="col-md-6">
+                                    <div <?php post_class('col-md-6'); ?>>
                                         <div class="card news-card mt-4">
                                             <?php
                                                 if(has_post_thumbnail()) {
