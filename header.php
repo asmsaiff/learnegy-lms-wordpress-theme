@@ -7,7 +7,8 @@
     
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <!-- header-start  -->
     <header>
         <?php
@@ -92,7 +93,7 @@
         <!-- nav-bar-start  -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 sticky-top shadow-sm">
             <div class="container-xl sticky-top">
-                <a class="navbar-brand" href="<?php echo home_url(); ?>">
+                <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
                     <?php
                         if(current_theme_supports('custom-logo')) {
                             $craftnce_custom_logo_id = get_theme_mod( 'custom_logo' );
