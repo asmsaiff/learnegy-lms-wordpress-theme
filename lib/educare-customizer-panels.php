@@ -1,6 +1,6 @@
 <?php
     if ( class_exists( 'WP_Customize_Panel' ) ) {
-        class PE_WP_Customize_Panel extends WP_Customize_Panel {
+        class EduCare_WP_Customize_Panel extends WP_Customize_Panel {
             public $panel;
             public $type = 'pe_panel';
 
@@ -17,7 +17,7 @@
     }
 
     if ( class_exists( 'WP_Customize_Section' ) ) {
-        class PE_WP_Customize_Section extends WP_Customize_Section {
+        class EduCare_WP_Customize_Section extends WP_Customize_Section {
             public $section;
             public $type = 'pe_section';
 
@@ -39,13 +39,13 @@
         }
     }
 
-    // // Enqueue our scripts and styles
-    // function pe_customize_controls_scripts() {
-    //     wp_enqueue_script( 'pe-customize-controls', get_theme_file_uri( '/assets/js/educare-customize-controls.js' ), array(), '1.0', true );
-    // }
-    // add_action( 'customize_controls_enqueue_scripts', 'pe_customize_controls_scripts' );
+    // Enqueue our scripts and styles
+    function educare_customize_controls_scripts() {
+        wp_enqueue_script( 'educare-customize-controls-js', get_theme_file_uri( '/assets/js/educare-customize-controls.js' ), array('jquery'), '1.0', true );
+    }
+    add_action( 'customize_controls_enqueue_scripts', 'educare_customize_controls_scripts' );
 
-    // function pe_customize_controls_styles() {
-    //     wp_enqueue_style( 'pe-customize-controls', get_theme_file_uri( '/assets/css/educare-customize-controls.css' ), array(), '1.0' );
-    // }
-    // add_action( 'customize_controls_print_styles', 'pe_customize_controls_styles' );
+    function educare_customize_controls_styles() {
+        wp_enqueue_style( 'educare-customize-controls-css', get_theme_file_uri( '/assets/css/educare-customize-controls.css' ), array(), '1.0' );
+    }
+    add_action( 'customize_controls_print_styles', 'educare_customize_controls_styles' );

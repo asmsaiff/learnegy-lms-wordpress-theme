@@ -14,6 +14,11 @@
         <?php
             if(get_theme_mod('educare_show_topbar_settings')) :
         ?>
+
+        <a class="skip-link screen-reader-text" href="#content">
+            <?php _e( 'Skip to Content', 'educare' ); ?>
+        </a>
+
         <!-- top-header-strat  -->
         <div class="main-container top-header">
             <div class="container">
@@ -96,8 +101,8 @@
                 <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
                     <?php
                         if(current_theme_supports('custom-logo')) {
-                            $craftnce_custom_logo_id = get_theme_mod( 'custom_logo' );
-                            $logo = wp_get_attachment_image_src( $craftnce_custom_logo_id , 'full' );
+                            $educare_custom_logo_id = get_theme_mod( 'custom_logo' );
+                            $logo = wp_get_attachment_image_src( $educare_custom_logo_id , 'full' );
 
                             if($logo) {
                         ?>

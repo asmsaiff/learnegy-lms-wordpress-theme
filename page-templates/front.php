@@ -6,7 +6,7 @@
     get_header();
 ?>
 
-    <main>
+    <main id="content">
         <?php
             $educare_home_slider = new WP_Query(array(
                 'category_name'         =>  'slider',

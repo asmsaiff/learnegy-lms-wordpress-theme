@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'educare_topbar', array(
-        'title' => 'Topbar',
+        'title' => 'Header',
         'panel' => 'educare',
         'priority' => 2,
     ));

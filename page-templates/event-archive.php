@@ -6,7 +6,7 @@
     get_header();
 ?>
 
-      <main>
+      <main id="content">
         <!-- our-event-strat  -->
         <section class="event">
             <div class="main-container">
