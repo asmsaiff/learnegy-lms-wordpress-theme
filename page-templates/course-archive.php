@@ -46,7 +46,7 @@
                                                 <?php the_title(); ?>
                                             </h4>
                                             <p>
-                                                <?php the_excerpt(); ?>
+                                                <?php echo get_the_excerpt(); ?>
                                             </p>
                                             <div
                                                 class="d-flex justify-content-between align-items-center course-card-footer">
