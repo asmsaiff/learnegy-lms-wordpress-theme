@@ -21,6 +21,18 @@
                             </h2>
                             <?php
                                 the_content();
+
+                                wp_link_pages();
+                            ?>
+                        </div>
+
+                        <div class="comments-box mt-5">
+                            <?php
+                                if(comments_open()) {
+                                    comments_template();
+                                } else {
+                                    _e('<p class="py-5">You can not comment in this post right now!</p>', 'educare');
+                                }
                             ?>
                         </div>
                     </div>
