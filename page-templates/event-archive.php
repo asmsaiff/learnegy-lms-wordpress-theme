@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="event-card-info">
                                             <p>
-                                                <?php the_excerpt(); ?>
+                                                <?php echo get_the_excerpt(); ?>
                                             </p>
                                         </div>
                                         <a class="event-view-details mt-2" href="<?php the_permalink(); ?>">
