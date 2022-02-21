@@ -121,6 +121,8 @@ a img.aligncenter {
     margin: 0;
     padding: 0 4px 5px;
 }
+.gallery-caption{}
+.bypostauthor{}
 
 /* section-header  */
 .section-header{
@@ -217,6 +219,14 @@ a img.aligncenter {
 .navbar-expand-lg .navbar-nav .nav-link {
 	font-weight: 500;
 	padding: 10px 12px;
+}
+.nav-menu-create-notice {
+    text-decoration: none;
+    color: var(--bs-primary);
+}
+
+.nav-menu-create-notice:hover {
+    text-decoration: underline;
 }
 
 .admission-btn{

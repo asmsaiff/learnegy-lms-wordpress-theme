@@ -122,15 +122,19 @@
                 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <?php
-                        wp_nav_menu(array(
-                            'theme_location'            =>  'primary-menu',
-                            'menu_class'                =>  '',
-                            'menu-container'            =>  'false',
-                            'fallback_cb'               => '__return_false',
-                            'items_wrap'                => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm %2$s">%3$s</ul>',
-                            'depth'                     => 2,
-                            'walker'                    => new educare_wp_nav_menu_walker(),
-                        ));
+                        if(has_nav_menu('primary-menu')) {
+                            wp_nav_menu(array(
+                                'theme_location'            =>  'primary-menu',
+                                'menu_class'                =>  '',
+                                'menu-container'            =>  'false',
+                                'fallback_cb'               => '__return_false',
+                                'items_wrap'                => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-lg-0 text-sm %2$s">%3$s</ul>',
+                                'depth'                     => 2,
+                                'walker'                    => new educare_wp_nav_menu_walker(),
+                            ));
+                        } else {
+                            echo '<a class="text-primary text-sm nav-menu-create-notice" href="'.home_url('/wp-admin/nav-menus.php').'">Create nav menu first</a>';
+                        }
                     ?>
                 </div>
             </div>
