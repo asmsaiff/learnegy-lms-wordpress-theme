@@ -6,7 +6,7 @@
     get_header();
 ?>
 
-    <main>
+    <main id="content">
         <!-- course-saection-start -->
         <section>
             <div class="main-container">

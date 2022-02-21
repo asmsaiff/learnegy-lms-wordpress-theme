@@ -6,7 +6,7 @@
     get_header();
 ?>
 
-    <main>
+    <main id="content">
         <!-- Notice-board-section-start  -->
         <section class="notice-board">
             <div class="main-container p-3">

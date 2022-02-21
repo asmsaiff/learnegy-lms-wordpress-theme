@@ -6,7 +6,7 @@
     get_header();
 ?>
 
-<main>
+<main id="content">
     <?php
         if(get_theme_mod('educare_show_principal_settings')) :
     ?>
