@@ -1,12 +1,12 @@
 <?php
     require_once get_template_directory() . '/lib/educare-customizer-panels.php';
 
-    function pe_customize_register( $wp_customize ) {
+    function educare_customize_register( $wp_customize ) {
 
         // Has to be at the top
-        $wp_customize->register_panel_type( 'PE_WP_Customize_Panel' );
+        $wp_customize->register_panel_type( 'EduCare_WP_Customize_Panel' );
 
-        $educare_theme_options = new PE_WP_Customize_Panel( $wp_customize, 'educare_theme_options', array(
+        $educare_theme_options = new EduCare_WP_Customize_Panel( $wp_customize, 'educare_theme_options', array(
             'title'             => 'EduCare Theme Options',
             'capability'        => 'edit_theme_options',
             'priority'          => 1,
@@ -18,7 +18,7 @@
          * ================= Header Panel =================
          * ================================================
          */
-        $educare_header = new PE_WP_Customize_Panel( $wp_customize, 'educare', array(
+        $educare_header = new EduCare_WP_Customize_Panel( $wp_customize, 'educare', array(
             'title'             => 'Educare',
             'capability'        => 'edit_theme_options',
             'panel'             => 'educare_theme_options',
@@ -34,7 +34,7 @@
          * ================= Homepage Panel ===============
          * ================================================
          */
-        $educare_header = new PE_WP_Customize_Panel( $wp_customize, 'educare_homepage', array(
+        $educare_header = new EduCare_WP_Customize_Panel( $wp_customize, 'educare_homepage', array(
             'title'             => 'Educare Homepage Options',
             'capability'        => 'edit_theme_options',
             'panel'             => 'educare_theme_options',
@@ -52,4 +52,4 @@
         require_once get_template_directory() . '/inc/option-panel/op-newsletter.php';
     }
 
-    add_action( 'customize_register', 'pe_customize_register' );
+    add_action( 'customize_register', 'educare_customize_register' );

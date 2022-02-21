@@ -1,6 +1,6 @@
 <?php
     if ( class_exists( 'WP_Customize_Panel' ) ) {
-        class PE_WP_Customize_Panel extends WP_Customize_Panel {
+        class EduCare_WP_Customize_Panel extends WP_Customize_Panel {
             public $panel;
             public $type = 'pe_panel';
 
@@ -17,7 +17,7 @@
     }
 
     if ( class_exists( 'WP_Customize_Section' ) ) {
-        class PE_WP_Customize_Section extends WP_Customize_Section {
+        class EduCare_WP_Customize_Section extends WP_Customize_Section {
             public $section;
             public $type = 'pe_section';
 
