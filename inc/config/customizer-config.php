@@ -7,7 +7,7 @@
         $wp_customize->register_panel_type( 'EduCare_WP_Customize_Panel' );
 
         $educare_theme_options = new EduCare_WP_Customize_Panel( $wp_customize, 'educare_theme_options', array(
-            'title'             => 'EduCare Theme Options',
+            'title'             => 'EduCare Options',
             'capability'        => 'edit_theme_options',
             'priority'          => 1,
         ));
@@ -19,7 +19,7 @@
          * ================================================
          */
         $educare_header = new EduCare_WP_Customize_Panel( $wp_customize, 'educare', array(
-            'title'             => 'Educare',
+            'title'             => 'General',
             'capability'        => 'edit_theme_options',
             'panel'             => 'educare_theme_options',
             'priority'          => 1,
@@ -35,7 +35,7 @@
          * ================================================
          */
         $educare_header = new EduCare_WP_Customize_Panel( $wp_customize, 'educare_homepage', array(
-            'title'             => 'Educare Homepage Options',
+            'title'             => 'Homepage Options',
             'capability'        => 'edit_theme_options',
             'panel'             => 'educare_theme_options',
             'priority'          => 2,

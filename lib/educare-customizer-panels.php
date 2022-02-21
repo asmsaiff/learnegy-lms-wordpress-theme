@@ -38,3 +38,14 @@
             }
         }
     }
+
+    // Enqueue our scripts and styles
+    function educare_customize_controls_scripts() {
+        wp_enqueue_script( 'educare-customize-controls-js', get_theme_file_uri( '/assets/js/educare-customize-controls.js' ), array('jquery'), '1.0', true );
+    }
+    add_action( 'customize_controls_enqueue_scripts', 'educare_customize_controls_scripts' );
+
+    function educare_customize_controls_styles() {
+        wp_enqueue_style( 'educare-customize-controls-css', get_theme_file_uri( '/assets/css/educare-customize-controls.css' ), array(), '1.0' );
+    }
+    add_action( 'customize_controls_print_styles', 'educare_customize_controls_styles' );
