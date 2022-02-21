@@ -86,5 +86,19 @@
             'before_widget'         => '<div>',
             'after_widget'          =>  '</div>'
         ));
+
+        register_sidebar(array(
+            'name'                  =>  __('Blog Sidebar', 'educare'),
+            'description'           =>  __('Blog archive page sidebar', 'educare'),
+            'id'                    =>  'blog-sidebar',
+            'before_widget'         => '<div>',
+            'after_widget'          =>  '</div>'
+        ));
     }
     add_action('widgets_init', 'educare_widgets');
+
+    // Excerpt wrap by char limit
+    function excerpt_char_limit($e){
+		return substr($e,0,150);
+	}
+	add_filter('get_the_excerpt','excerpt_char_limit');

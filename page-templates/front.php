@@ -269,7 +269,7 @@
                                                 <?php the_title(); ?>
                                             </h4>
                                             <p>
-                                                <?php the_excerpt(); ?>
+                                                <?php echo get_the_excerpt(); ?>
                                             </p>
                                             <div class="d-flex justify-content-between align-items-center course-card-footer">
                                                 <div class="date d-flex">
@@ -533,7 +533,7 @@
                                         </div>
                                         <div class="event-card-info">
                                             <p>
-                                                <?php the_excerpt(); ?>
+                                                <?php echo get_the_excerpt(); ?>
                                             </p>
                                         </div>
                                         <a class="event-view-details mt-2" href="<?php the_permalink(); ?>">
@@ -554,6 +554,10 @@
         <!-- our-events-close  -->
         <?php
             endif;
+
+            if(get_theme_mod('educare_show_newsletter_settings')) {
+                get_template_part('template-parts/educare-newsletter');
+            }
         
             if(get_theme_mod('educare_show_blog_settings')) :
         ?>
@@ -600,7 +604,7 @@
                                 </div>
                                 <div class="news-title">
                                     <h4><?php the_title(); ?></h4>
-                                    <p class="mt-3"><?php the_excerpt(); ?></p>
+                                    <p class="mt-3"><?php echo get_the_excerpt(); ?></p>
                                 </div>
                                 <div class="news-read-more mt-2">
                                     <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'educare'); ?></a>
@@ -617,41 +621,7 @@
         <!-- news-section-close  -->
         <?php
             endif;
-
-            if(get_theme_mod('educare_show_newsletter_settings')) :
         ?>
-
-        <!-- Our Newsletter-start  -->
-        <section class="p-0">
-            <div class="main-container news-letter-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="news-letter">
-                            <div class="news-letter-header">
-                                <h4>
-                                    <?php echo esc_html(get_theme_mod('educare_newsletter_subheading_settings', 'Subscribe')); ?>
-                                </h4>
-                                <h2 class="text-white">
-                                    <?php echo esc_html(get_theme_mod('educare_newsletter_heading_settings', 'Our Newsletter')); ?>
-                                </h2>
-                                <p class="text-white">
-                                    <?php echo esc_html(get_theme_mod('educare_newsletter_desc_settings')); ?>
-                                </p>
-                            </div>
-                                <?php
-                                    if(is_active_sidebar( 'educare_newsletter_optin' )) {
-                                        dynamic_sidebar( 'educare_newsletter_optin' );
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Our Newsletter-close  -->
-        <?php endif; ?>
     </main>
       
 <?php

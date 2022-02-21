@@ -39,9 +39,6 @@ h1,h2,h3,h4,h5,h6,p{
 ul,ol{
     padding: 0;
 }
-footer{
-    padding-top: 60px;
-}
 .main-container{
     width: 100%;
 }
@@ -974,4 +971,12 @@ footer{
 	position: absolute;
 	left: 45%;
 	top: 93%;
+}
+
+.footer-massage a {
+    color: #ccc;
+}
+.footer-massage a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
