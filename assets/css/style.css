@@ -197,7 +197,7 @@ a img.aligncenter {
 .navbar-toggler:focus {
 	text-decoration: none;
 	outline: 0;
-	box-shadow: 0 0 0 0 !important; 
+	box-shadow: 1px 1px 1px 1px !important; 
 }
 .logo-text-1{
     color: var(--bs-secondary);
