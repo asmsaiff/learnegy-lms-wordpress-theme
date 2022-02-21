@@ -121,6 +121,8 @@ a img.aligncenter {
     margin: 0;
     padding: 0 4px 5px;
 }
+.gallery-caption{}
+.bypostauthor{}
 
 /* section-header  */
 .section-header{
@@ -197,7 +199,7 @@ a img.aligncenter {
 .navbar-toggler:focus {
 	text-decoration: none;
 	outline: 0;
-	box-shadow: 0 0 0 0 !important; 
+	box-shadow: 1px 1px 1px 1px !important; 
 }
 .logo-text-1{
     color: var(--bs-secondary);
@@ -217,6 +219,14 @@ a img.aligncenter {
 .navbar-expand-lg .navbar-nav .nav-link {
 	font-weight: 500;
 	padding: 10px 12px;
+}
+.nav-menu-create-notice {
+    text-decoration: none;
+    color: var(--bs-primary);
+}
+
+.nav-menu-create-notice:hover {
+    text-decoration: underline;
 }
 
 .admission-btn{

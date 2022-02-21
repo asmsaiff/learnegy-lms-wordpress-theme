@@ -66,7 +66,10 @@
                             </div>
                         </div>
                             
-                        <?php get_sidebar(); ?>
+                        <div class="<?php echo esc_attr(get_theme_mod('educare_show_blog_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
+                            <?php get_sidebar(); ?>
+                        </div>
+                        
                         <!-- tags-close  -->
                         </div>
                     </div>
