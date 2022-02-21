@@ -51,6 +51,7 @@
         wp_enqueue_style('main-css', get_stylesheet_uri());
 
         // JS Enqueue
+        wp_enqueue_script( 'comment-reply' );
         wp_enqueue_script( 'popper-js', get_template_directory_uri().'/assets/js/popper.js', array('jquery'), null, true );
         wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js', array('jquery'), null, true );
         wp_enqueue_script( 'main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null, true );
