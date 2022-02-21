@@ -733,7 +733,7 @@ ul,ol{
 /* related-course-close  */
 /* teachers-header-title-start  */
 .teachers-header-title{
-    padding: 20px 0;
+    padding: 0 0 20px 0;
     border-bottom: 1px solid #A8D5FF;
 }
 .teachers-header-title h2{
