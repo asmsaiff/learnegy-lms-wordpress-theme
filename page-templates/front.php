@@ -596,20 +596,32 @@
                                 <div class="event-header d-flex justify-content-between">
                                     <div class="event-address d-flex">
                                         <span><i class="fas fa-globe-europe"></i></span>
-                                        <p>Algolia</p>
+                                        <p>
+                                            <?php the_category(' '); ?>
+                                        </p>
                                     </div>
                                     <div class="event-date d-flex">
                                         <span><i class="far fa-calendar"></i></span>
-                                        <p><?php echo get_the_date(); ?></p>
+                                        <p>
+                                            <?php echo get_the_date(); ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="news-title">
-                                    <h4><?php the_title(); ?></h4>
-                                    <p class="mt-3"><?php echo get_the_excerpt(); ?></p>
+                                    <h4>
+                                        <?php the_title(); ?>
+                                    </h4>
+                                    <p class="mt-3">
+                                        <?php echo get_the_excerpt(); ?>
+                                    </p>
                                 </div>
                                 <div class="news-read-more mt-2">
-                                    <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'educare'); ?></a>
-                                    <span><i class="fas fa-arrow-right"></i></span>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php _e('Read More', 'educare'); ?>
+                                    </a>
+                                    <span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>

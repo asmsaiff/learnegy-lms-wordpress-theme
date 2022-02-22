@@ -31,7 +31,9 @@
                                             <div class="event-header d-flex justify-content-between">
                                                 <div class="event-address d-flex">
                                                     <span><i class="fas fa-globe-europe"></i></span>
-                                                    <p>Algolia</p>
+                                                    <p>
+                                                        <?php the_category(' '); ?>
+                                                    </p>
                                                 </div>
                                                 <div class="event-date d-flex">
                                                     <span><i class="far fa-calendar"></i></span>

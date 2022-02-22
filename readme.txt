@@ -61,5 +61,9 @@ Copyright 2022 Fonticons, Inc.
 
 === Changelog ===
 
+v1.0.1
+- Fix minor bug
+- Add post meta
+
 v1.0.0
 - Release first version
