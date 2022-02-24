@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="news-title">
                                         <h4><?php the_title(); ?></h4>
-                                        <p class="mt-3"><?php echo get_the_excerpt(); ?></p>
+                                        <p class="mt-3"><?php echo wp_trim_words( get_the_content(), 20, '...' )(); ?></p>
                                     </div>
                                     <div class="news-read-more mt-2">
                                         <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'educare'); ?></a>
