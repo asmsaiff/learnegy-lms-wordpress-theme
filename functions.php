@@ -44,18 +44,21 @@
 
     function educare_assets_enqueue() {
         // CSS Enqueue
-        wp_enqueue_style('google-font', '//fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        wp_enqueue_style( 'fontawesome-css', get_template_directory_uri().'/assets/css/all.css');
-        wp_enqueue_style( 'bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
-        wp_enqueue_style( 'theme-style-css', get_template_directory_uri().'/assets/css/style.css');
-        wp_enqueue_style( 'responsive-css', get_template_directory_uri().'/assets/css/responsive.css');
-        wp_enqueue_style('main-css', get_stylesheet_uri());
+        wp_enqueue_style('educare_google-font', '//fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        wp_enqueue_style( 'educare_fontawesome-css', get_template_directory_uri().'/assets/css/all.css');
+        wp_enqueue_style( 'educare_bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
+        wp_enqueue_style( 'educare_theme-style-css', get_template_directory_uri().'/assets/css/style.css');
+        wp_enqueue_style( 'educare_responsive-css', get_template_directory_uri().'/assets/css/responsive.css');
+        wp_enqueue_style('educare_main-css', get_stylesheet_uri());
 
         // JS Enqueue
         wp_enqueue_script( 'comment-reply' );
-        wp_enqueue_script( 'popper-js', get_template_directory_uri().'/assets/js/popper.js', array('jquery'), null, true );
-        wp_enqueue_script( 'bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js', array('jquery'), null, true );
-        wp_enqueue_script( 'main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null, true );
+        wp_enqueue_script( 'educare_popper-js', get_template_directory_uri().'/assets/js/popper.js', array('jquery'),
+        null, true );
+        wp_enqueue_script( 'educare_bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js',
+        array('jquery'), null, true );
+        wp_enqueue_script( 'educare_main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null,
+        true );
     }
     add_action( 'wp_enqueue_scripts', 'educare_assets_enqueue' );
 
