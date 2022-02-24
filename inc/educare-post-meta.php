@@ -203,50 +203,6 @@
         ));
 
         acf_add_local_field_group(array(
-            'key' => 'group_6213429e163d2',
-            'title' => 'Post Meta',
-            'fields' => array(
-                array(
-                    'key' => 'field_621342a26b980',
-                    'label' => 'Educare Post Meta',
-                    'name' => 'educare_post_meta',
-                    'type' => 'wysiwyg',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'default_value' => '',
-                    'tabs' => 'all',
-                    'toolbar' => 'full',
-                    'media_upload' => 1,
-                    'delay' => 0,
-                ),
-            ),
-            'location' => array(
-                array(
-                    array(
-                        'param' => 'post_type',
-                        'operator' => '==',
-                        'value' => 'post',
-                    ),
-                ),
-            ),
-            'menu_order' => 0,
-            'position' => 'normal',
-            'style' => 'default',
-            'label_placement' => 'top',
-            'instruction_placement' => 'label',
-            'hide_on_screen' => '',
-            'active' => true,
-            'description' => '',
-            'show_in_rest' => 0,
-        ));
-
-        acf_add_local_field_group(array(
             'key' => 'group_6211fd88e1d48',
             'title' => 'Teachers Social Media',
             'fields' => array(
