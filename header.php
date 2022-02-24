@@ -110,7 +110,9 @@
                     <?php
                         } else {
                     ?>
-                    <span class="logo-text-1"><?php _e('EDU', 'educare'); ?></span><span class="logo-text-2"><?php _e('CARE', 'educare'); ?></span>
+                    <span class="logo-text-1">
+                        <?php bloginfo( 'name' ); ?>
+                    </span>
                     <?php
                             }
                         }

@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-xl-4">
                         <?php
-                            echo the_field('educare_post_meta');
+                            esc_html_e( the_field('educare_post_meta') );
                         ?>
                     </div>
                 </div>

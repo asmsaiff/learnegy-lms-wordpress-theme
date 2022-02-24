@@ -58,6 +58,17 @@ Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
 License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
 Copyright 2022 Fonticons, Inc.
 
+TGM-Plugin-Activation
+2.6.1 for parent theme Educare for publication on WordPress.org
+author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
+copyright  Copyright (c) 2011, Thomas Griffin
+license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+
+Bootstrap v5.1.3 (https://getbootstrap.com/)
+Copyright 2011-2021 The Bootstrap Authors
+Copyright 2011-2021 Twitter, Inc.
+Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+
 
 === Changelog ===
 

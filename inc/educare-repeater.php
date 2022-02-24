@@ -1,12 +1,12 @@
 <?php
-function customizer_repeater_register( $wp_customize ) {
+function educare_customizer_repeater_register( $wp_customize ) {
 
 	require_once( get_template_directory().'/lib/customizer-repeater-control.php' );
 
 }
-add_action( 'customize_register', 'customizer_repeater_register' );
+add_action( 'customize_register', 'educare_customizer_repeater_register' );
 
-function customizer_repeater_sanitize($input){
+function educare_customizer_repeater_sanitize($input){
 	$input_decoded = json_decode($input,true);
 
 	if(!empty($input_decoded)) {
