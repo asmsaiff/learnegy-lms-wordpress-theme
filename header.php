@@ -9,15 +9,15 @@
 </head>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
+    <a class="skip-link screen-reader-text" href="#content">
+        <?php _e( 'Skip to Content', 'educare' ); ?>
+    </a>
+    
     <!-- header-start  -->
     <header>
         <?php
             if(get_theme_mod('educare_show_topbar_settings')) :
         ?>
-
-        <a class="skip-link screen-reader-text" href="#content">
-            <?php _e( 'Skip to Content', 'educare' ); ?>
-        </a>
 
         <!-- top-header-strat  -->
         <div class="main-container top-header">
@@ -118,7 +118,7 @@
                         }
                     ?>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
                     <span><i class="fas fa-bars"></i></span>
                 </button>
                 
