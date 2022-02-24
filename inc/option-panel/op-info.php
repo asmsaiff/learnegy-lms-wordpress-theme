@@ -62,7 +62,7 @@
     ));
 
     $wp_customize->add_setting( 'educare_homepage_info_item_settings', array(
-        'sanitize_callback' => 'customizer_repeater_sanitize'
+        'sanitize_callback' => 'educare_customizer_repeater_sanitize'
     ));
     $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'educare_homepage_info_item_ctrl', array(
         'label'                                             => esc_html__('Accordion Item','educare'),
