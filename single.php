@@ -9,7 +9,14 @@
         <div class="main-container">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-8">
+                    <?php
+                        if(get_theme_mod('educare_show_blog_single_sidebar_settings')) {
+                            $single_col_width = 8;
+                        } else {
+                            $single_col_width = 12;
+                        }
+                    ?>
+                    <div class="col-xl-<?php echo esc_attr( $single_col_width ); ?>">
                         <div class="mt-2 event-document">
                             <?php
                                 if(has_post_thumbnail()) {
@@ -36,10 +43,9 @@
                             ?>
                         </div>
                     </div>
-                    <div class="col-xl-4">
-                        <?php
-                            esc_html_e( the_field('educare_post_meta') );
-                        ?>
+                    <div
+                        class="<?php echo esc_attr(get_theme_mod('educare_show_blog_single_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
+                        <?php get_sidebar( 'single' ); ?>
                     </div>
                 </div>
             </div>
