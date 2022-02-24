@@ -70,6 +70,9 @@
         position: relative;
         z-index: 11;
     }
+    a:hover {
+        text-decoration: underline !important;
+    }
 </style>
 <?php
     }
