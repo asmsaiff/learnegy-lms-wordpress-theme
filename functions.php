@@ -59,9 +59,6 @@
     }
     add_action( 'wp_enqueue_scripts', 'educare_assets_enqueue' );
 
-    remove_filter( 'the_content', 'wpautop');
-    remove_filter( 'the_excerpt', 'wpautop');
-
     function educare_head_styles() {
 ?>
 <style>
@@ -96,12 +93,6 @@
         ));
     }
     add_action('widgets_init', 'educare_widgets');
-
-    // Excerpt wrap by char limit
-    function excerpt_char_limit($e){
-		return substr($e,0,150);
-	}
-	add_filter('get_the_excerpt','excerpt_char_limit');
 
     function educare_skip_link_focus_fix() {
     ?>
