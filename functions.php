@@ -97,6 +97,14 @@
             'before_widget'         => '<div>',
             'after_widget'          =>  '</div>'
         ));
+
+        register_sidebar(array(
+            'name'                  =>  __('Single Blog Sidebar', 'educare'),
+            'description'           =>  __('Blog single post page sidebar', 'educare'),
+            'id'                    =>  'blog-sidebar-single',
+            'before_widget'         => '<div>',
+            'after_widget'          =>  '</div>'
+        ));
     }
     add_action('widgets_init', 'educare_widgets');
 

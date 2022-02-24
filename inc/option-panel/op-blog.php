@@ -35,6 +35,21 @@
         'type'              =>  'checkbox'
     ));
 
+    $wp_customize->add_setting('educare_show_blog_single_sidebar_settings', array(
+        'capability'        => 'edit_theme_options',
+        'transport'         => 'refresh',
+        'type'              => 'theme_mod',
+        'sanitize_callback' => function( $input ) {
+            return ( ( isset( $input ) && true == $input ) ? true : false );
+        }
+    ));
+    $wp_customize->add_control('educare_show_blog_single_sidebar_ctrl', array(
+        'label'             =>  __('Show Blog Single Page Sidebar', 'educare'),
+        'section'           =>  'educare_blog',
+        'settings'          =>  'educare_show_blog_single_sidebar_settings',
+        'type'              =>  'checkbox'
+    ));
+
     $wp_customize->add_setting('educare_blog_subheading_settings', array(
         'default'           =>  'Discover Your Perfect',
         'capability'        => 'edit_theme_options',

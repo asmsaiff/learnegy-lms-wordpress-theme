@@ -17,7 +17,7 @@
     <!-- footer-close  -->
 
     <!-- back-to-top  -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="myBtn" title="<?php _e('Go to top', 'educare'); ?>"><i class="fas fa-arrow-up"></i></button>
 
     <?php wp_footer(); ?>
 </body>

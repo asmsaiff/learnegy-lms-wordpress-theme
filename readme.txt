@@ -69,8 +69,17 @@ Copyright 2011-2021 The Bootstrap Authors
 Copyright 2011-2021 Twitter, Inc.
 Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
 
+Popper JS
+popperjs/core v2.6.0 - MIT License
+
+Customizer Repeater v1.1.0
+Author - Cristian Ungureanu
+Licensed under MIT (https://github.com/cristian-ungureanu/customizer-repeater/blob/production/LICENSE)
+
 
 === Changelog ===
+v1.1.0
+- Fix Issues
 
 v1.0.1
 - Fix minor bug
