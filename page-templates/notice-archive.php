@@ -58,8 +58,8 @@
                         </div>
                         <?php
                             endwhile;
+                            wp_reset_postdata();
                         endif;
-                        wp_reset_query();
                     ?>
                     </div>
                 </div>
