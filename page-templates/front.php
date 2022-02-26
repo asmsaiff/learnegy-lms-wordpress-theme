@@ -99,7 +99,7 @@
         <!-- hero-section-close  -->
         <?php 
             endif;
-            wp_reset_query();
+            wp_reset_postdata();
 
             if(get_theme_mod('educare_show_home_info_settings')) :
         ?>
@@ -218,8 +218,8 @@
                         </div>
                         <?php
                                 endwhile;
+                                wp_reset_postdata();
                             endif;
-                            wp_reset_query();
                         ?>
                     </div>
                 </div>
@@ -288,7 +288,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <?php endwhile; ?>
+                                    <?php endwhile; wp_reset_postdata(); ?>
                                 </div>
                             </div>
                         </div>
@@ -374,7 +374,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?php endwhile; ?>
+                        <?php endwhile; wp_reset_postdata(); ?>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -544,7 +544,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?php endwhile; ?>
+                        <?php endwhile; wp_reset_postdata(); ?>
                     </div>
                     <?php
                         endif;
@@ -625,7 +625,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?php endwhile; ?>
+                        <?php endwhile; wp_reset_postdata(); ?>
                     </div>
                 </div>
                 <?php endif; ?>
