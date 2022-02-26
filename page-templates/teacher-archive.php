@@ -73,7 +73,9 @@
                 ?>
             <div class="container">
                 <div class="teachers-header-title">
-                    <h2>All Teachers</h2>
+                    <h2>
+                        <?php _e('All Teachers', 'educare'); ?>
+                    </h2>
                 </div>
                 <div class="row">
                     <?php
