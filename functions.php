@@ -3,6 +3,7 @@
 
     
     require_once get_template_directory() . '/inc/educare-plugins.php';
+    require_once get_template_directory() . '/inc/educare-post-meta.php';
 
     if(!function_exists('educare_theme_setup')) {
         function educare_theme_setup() {
