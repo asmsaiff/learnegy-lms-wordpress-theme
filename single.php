@@ -41,8 +41,7 @@
                             ?>
                         </div>
                     </div>
-                    <div
-                        class="<?php echo esc_attr(get_theme_mod('educare_show_blog_single_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
+                    <div class="<?php echo esc_attr(get_theme_mod('educare_show_blog_single_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
                         <?php get_sidebar( 'single' ); ?>
                     </div>
                 </div>
@@ -51,7 +50,6 @@
         <!-- single-coureses-start-second-close  -->
     </section>
 </main>
-
 
 <?php
     get_footer();
