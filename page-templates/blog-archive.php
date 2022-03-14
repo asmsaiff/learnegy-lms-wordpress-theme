@@ -17,12 +17,12 @@
                     <div class="col-xl-8">
                         <div class="row">
                             <?php
-                                    $educare_posts = new WP_Query(array(
+                                    $learnegy_posts = new WP_Query(array(
                                         'category_name' => 'blog',
                                     ));
 
-                                    while($educare_posts->have_posts()) :
-                                        $educare_posts->the_post();
+                                    while($learnegy_posts->have_posts()) :
+                                        $learnegy_posts->the_post();
                                     ?>
                             <div class="col-md-6">
                                 <div class="card news-card mt-4">
@@ -46,7 +46,7 @@
                                         <p class="mt-3"><?php echo wp_trim_words( get_the_content(), 20, '...' )(); ?></p>
                                     </div>
                                     <div class="news-read-more mt-2">
-                                        <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'educare'); ?></a>
+                                        <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'learnegy'); ?></a>
                                         <span><i class="fas fa-arrow-right"></i></span>
                                     </div>
                                 </div>

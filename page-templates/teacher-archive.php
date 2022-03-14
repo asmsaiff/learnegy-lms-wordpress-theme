@@ -8,7 +8,7 @@
 
 <main id="content">
     <?php
-        if(get_theme_mod('educare_show_principal_settings')) :
+        if(get_theme_mod('learnegy_show_principal_settings')) :
     ?>
     <section>
         <div class="main-container">
@@ -16,40 +16,40 @@
                 <div class="teachers-header-title">
                     <h2>
                         <?php
-                            echo esc_html(get_theme_mod('educare_vop_sec_heading_settings', 'Principal of EduCare School'));
+                            echo esc_html(get_theme_mod('learnegy_vop_sec_heading_settings', 'Principal of learnegy School'));
                         ?>
                     </h2>
                 </div>
                 <div class="row align-items-center justify-content-center mt-3">
                     <div class="col-xl-4 col-md-6">
                         <div class="card mt-4 p-5 teacher-info">
-                            <img src="<?php echo esc_url(get_theme_mod('educare_principal_image_settings')); ?>">
+                            <img src="<?php echo esc_url(get_theme_mod('learnegy_principal_image_settings')); ?>">
                             <div class="teacher-details">
                                 <h2>
                                     <?php
-                                        echo esc_html(get_theme_mod('educare_principal_name_settings'));
+                                        echo esc_html(get_theme_mod('learnegy_principal_name_settings'));
                                     ?>
                                 </h2>
                                 <p>
                                     <?php
-                                        echo esc_html(get_theme_mod('educare_principal_designation_settings'));
+                                        echo esc_html(get_theme_mod('learnegy_principal_designation_settings'));
                                     ?>
                                 </p>
                             </div>
                             <div class="my-3">
                                 <?php
-                                    echo esc_html(get_theme_mod('educare_principal_info_settings'));
+                                    echo esc_html(get_theme_mod('learnegy_principal_info_settings'));
                                 ?>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-8 d-flex justify-content-center align-items-center">
                         <div class="principal-document w-100">
-                            <h2 class="principal-name mt-3"><?php _e('From', 'educare') . esc_html_e(get_theme_mod('educare_principal_name_settings')); ?></h2>
+                            <h2 class="principal-name mt-3"><?php _e('From', 'learnegy') . esc_html_e(get_theme_mod('learnegy_principal_name_settings')); ?></h2>
                             <div class="about-principal">
                                 <p class="lead mt-4">
                                     <?php
-                                        echo esc_html(get_theme_mod('educare_principal_bio_settings'));
+                                        echo esc_html(get_theme_mod('learnegy_principal_bio_settings'));
                                     ?>
                                 </p>
                             </div>
@@ -65,22 +65,22 @@
     <section class="teacher-section">
         <div class="main-container">
             <?php
-                    $educare_teacher = new WP_Query(array(
+                    $learnegy_teacher = new WP_Query(array(
                         'category_name'         =>  'teacher',
                     ));
 
-                    if($educare_teacher->post_count >= 1) :
+                    if($learnegy_teacher->post_count >= 1) :
                 ?>
             <div class="container">
                 <div class="teachers-header-title">
                     <h2>
-                        <?php _e('All Teachers', 'educare'); ?>
+                        <?php _e('All Teachers', 'learnegy'); ?>
                     </h2>
                 </div>
                 <div class="row">
                     <?php
-                            while($educare_teacher->have_posts()) :
-                                $educare_teacher->the_post();
+                            while($learnegy_teacher->have_posts()) :
+                                $learnegy_teacher->the_post();
                         ?>
                     <div class="col-xl-3 col-md-6">
                         <div class="card mt-4 teacher-info">
