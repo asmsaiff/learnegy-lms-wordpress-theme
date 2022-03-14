@@ -10,7 +10,7 @@
             <div class="container">
                 <div class="row">
                     <?php
-                        if(get_theme_mod('educare_show_blog_single_sidebar_settings')) {
+                        if(get_theme_mod('learnegy_show_blog_single_sidebar_settings')) {
                             $single_col_width = 8;
                         } else {
                             $single_col_width = 12;
@@ -41,7 +41,7 @@
                             ?>
                         </div>
                     </div>
-                    <div class="<?php echo esc_attr(get_theme_mod('educare_show_blog_single_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
+                    <div class="<?php echo esc_attr(get_theme_mod('learnegy_show_blog_single_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
                         <?php get_sidebar( 'single' ); ?>
                     </div>
                 </div>

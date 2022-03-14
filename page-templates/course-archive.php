@@ -12,19 +12,19 @@
             <div class="main-container">
                 <div class="section-header pb-0">
                     <h4>
-                        <?php esc_html_e(get_theme_mod('educare_course_subheading_settings', 'Welcome')); ?>
+                        <?php esc_html_e(get_theme_mod('learnegy_course_subheading_settings', 'Welcome')); ?>
                     </h4>
                     <h2>
-                        <?php esc_html_e(get_theme_mod('educare_course_heading_settings', 'Couress We Offer')); ?>
+                        <?php esc_html_e(get_theme_mod('learnegy_course_heading_settings', 'Couress We Offer')); ?>
                     </h2>
                 </div>
                 <?php
-                    $educare_course = new WP_Query(array(
+                    $learnegy_course = new WP_Query(array(
                         'category_name'         =>  'course',
                         'posts_per_page'        =>  8,
                     ));
 
-                    if($educare_course->post_count >= 1) :
+                    if($learnegy_course->post_count >= 1) :
                 ?>
                 <div class="container">
                     <div class="row">
@@ -32,8 +32,8 @@
                             <div class="courses-items mt-5">
                                 <div class="row">
                                     <?php
-                                        while($educare_course->have_posts()) :
-                                            $educare_course->the_post();
+                                        while($learnegy_course->have_posts()) :
+                                            $learnegy_course->the_post();
                                     ?>
                                     <div class="col-xl-3 col-md-6 card-items" data-item="computer">
                                         <div class="card mt-4 course-card computer">
@@ -58,7 +58,7 @@
                                                 </div>
                                                 <div class="read-more d-flex">
                                                     <a href="<?php the_permalink(); ?>">
-                                                        <?php _e('Read More', 'educare'); ?>
+                                                        <?php _e('Read More', 'learnegy'); ?>
                                                     </a>
                                                     <span><i class="fas fa-arrow-right"></i></span>
                                                 </div>
@@ -76,7 +76,7 @@
         </section>
         <!-- course-section-close  -->
          
-        <?php get_template_part('template-parts/educare-newsletter'); ?>
+        <?php get_template_part('template-parts/learnegy-newsletter'); ?>
     </main>
       
 <?php

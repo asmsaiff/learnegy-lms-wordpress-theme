@@ -12,17 +12,17 @@
             <div class="main-container">
                 <div class="container">
                     <?php
-                        $educare_event = new WP_Query(array(
+                        $learnegy_event = new WP_Query(array(
                             'category_name'         =>  'event',
                             'posts_per_page'        =>  10
                         ));
 
-                        if($educare_event->post_count >= 1) :
+                        if($learnegy_event->post_count >= 1) :
                     ?>
                     <div class="row">
                         <?php
-                            while($educare_event->have_posts()) :
-                                $educare_event->the_post();
+                            while($learnegy_event->have_posts()) :
+                                $learnegy_event->the_post();
                         ?>
                         <div class="col-md-6">
                             <div class="card mt-4 event-card">
@@ -79,7 +79,7 @@
                                             </p>
                                         </div>
                                         <a class="event-view-details mt-2" href="<?php the_permalink(); ?>">
-                                            <?php _e('View Details', 'educare'); ?>
+                                            <?php _e('View Details', 'learnegy'); ?>
                                         </a>
                                     </div>
                                 </div>
@@ -95,7 +95,7 @@
         </section>
         <!-- our-events-close  -->
 
-        <?php get_template_part('template-parts/educare-newsletter'); ?>
+        <?php get_template_part('template-parts/learnegy-newsletter'); ?>
       </main>
       
 <?php

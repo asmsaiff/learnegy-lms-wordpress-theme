@@ -13,14 +13,14 @@
                 <div class="container">
                     <div class="row">
                         <?php
-                        $educare_notice = new WP_Query(array(
+                        $learnegy_notice = new WP_Query(array(
                             'category_name'         =>  'notice',
                             'posts_per_page'        =>  24
                         ));
 
-                        if($educare_notice->post_count >= 1) :
-                            while($educare_notice->have_posts()) :
-                                $educare_notice->the_post();
+                        if($learnegy_notice->post_count >= 1) :
+                            while($learnegy_notice->have_posts()) :
+                                $learnegy_notice->the_post();
                     ?>
                         <div class="col-xl-6 mt-2">
                             <div class="notice-card overflow-hidden">
@@ -49,7 +49,7 @@
                                     <div class="col-md-3 d-flex align-items-center justify-content-center">
                                         <div class="notice-btn-btn d-flex justify-content-end pb-3">
                                             <a class="notice-btn mt-4" href="<?php the_permalink(); ?>">
-                                                <?php _e('View Notice', 'educare'); ?>
+                                                <?php _e('View Notice', 'learnegy'); ?>
                                             </a>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@
         <!-- Notice-board-section-close  -->
 
 
-        <?php get_template_part('template-parts/educare-newsletter'); ?>
+        <?php get_template_part('template-parts/learnegy-newsletter'); ?>
     </main>
 
 <?php

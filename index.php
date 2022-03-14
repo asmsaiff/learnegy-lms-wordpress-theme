@@ -9,7 +9,7 @@
                 <div class="container">
                     <div class="row">
                         <?php
-                            if(get_theme_mod('educare_show_blog_sidebar_settings')) {
+                            if(get_theme_mod('learnegy_show_blog_sidebar_settings')) {
                                 $col_width = 8;
                             } else {
                                 $col_width = 12;
@@ -45,7 +45,7 @@
                                                 <p class="mt-3"><?php echo wp_trim_words( get_the_content(), 20, '...' ); ?></p>
                                             </div>
                                             <div class="news-read-more mt-2">
-                                                <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'educare'); ?></a>
+                                                <a href="<?php the_permalink(); ?>"><?php _e('Read More', 'learnegy'); ?></a>
                                                 <span><i class="fas fa-arrow-right"></i></span>
                                             </div>
                                         </div>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                             
-                        <div class="<?php echo esc_attr(get_theme_mod('educare_show_blog_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
+                        <div class="<?php echo esc_attr(get_theme_mod('learnegy_show_blog_sidebar_settings') ? "col-xl-4" : "d-none"); ?>">
                             <?php get_sidebar(); ?>
                         </div>
                         

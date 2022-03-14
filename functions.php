@@ -2,13 +2,13 @@
     define( 'CUSTOMIZER_REPEATER_VERSION', '1.1.0' );
 
     
-    require_once get_template_directory() . '/inc/educare-plugins.php';
-    require_once get_template_directory() . '/inc/educare-post-meta.php';
+    require_once get_template_directory() . '/inc/learnegy-plugins.php';
+    require_once get_template_directory() . '/inc/learnegy-post-meta.php';
 
-    if(!function_exists('educare_theme_setup')) {
-        function educare_theme_setup() {
+    if(!function_exists('learnegy_theme_setup')) {
+        function learnegy_theme_setup() {
             // Load Theme TextDomain
-            load_theme_textdomain('educare');
+            load_theme_textdomain('learnegy');
     
             // Theme Supports
             add_theme_support('title-tag');
@@ -34,37 +34,37 @@
             );
     
             register_nav_menus(array(
-                'primary-menu'              =>  __('Primary Menu', 'educare'),
+                'primary-menu'              =>  __('Primary Menu', 'learnegy'),
             ));
         }
-        add_action('after_setup_theme', 'educare_theme_setup');
+        add_action('after_setup_theme', 'learnegy_theme_setup');
     }
 
-    function educare_assets_enqueue() {
+    function learnegy_assets_enqueue() {
         // CSS Enqueue
-        wp_enqueue_style('educare_google-font', '//fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        wp_enqueue_style( 'educare_fontawesome-css', get_template_directory_uri().'/assets/css/all.css');
-        wp_enqueue_style( 'educare_bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
-        wp_enqueue_style( 'educare_theme-style-css', get_template_directory_uri().'/assets/css/style.css');
-        wp_enqueue_style( 'educare_responsive-css', get_template_directory_uri().'/assets/css/responsive.css');
-        wp_enqueue_style('educare_main-css', get_stylesheet_uri());
+        wp_enqueue_style('learnegy_google-font', '//fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        wp_enqueue_style( 'learnegy_fontawesome-css', get_template_directory_uri().'/assets/css/all.css');
+        wp_enqueue_style( 'learnegy_bootstrap-css', get_template_directory_uri().'/assets/css/bootstrap.css');
+        wp_enqueue_style( 'learnegy_theme-style-css', get_template_directory_uri().'/assets/css/style.css');
+        wp_enqueue_style( 'learnegy_responsive-css', get_template_directory_uri().'/assets/css/responsive.css');
+        wp_enqueue_style('learnegy_main-css', get_stylesheet_uri());
 
         // JS Enqueue
         wp_enqueue_script( 'comment-reply' );
-        wp_enqueue_script( 'educare_popper-js', get_template_directory_uri().'/assets/js/popper.js', array('jquery'),
+        wp_enqueue_script( 'learnegy_popper-js', get_template_directory_uri().'/assets/js/popper.js', array('jquery'),
         null, true );
-        wp_enqueue_script( 'educare_bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js',
+        wp_enqueue_script( 'learnegy_bootstrap-js', get_template_directory_uri().'/assets/js/bootstrap.js',
         array('jquery'), null, true );
-        wp_enqueue_script( 'educare_main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null,
+        wp_enqueue_script( 'learnegy_main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), null,
         true );
     }
-    add_action( 'wp_enqueue_scripts', 'educare_assets_enqueue' );
+    add_action( 'wp_enqueue_scripts', 'learnegy_assets_enqueue' );
 
-    function educare_head_styles() {
+    function learnegy_head_styles() {
 ?>
 <style>
     .news-letter-section {
-        background: url("<?php echo esc_url( get_theme_mod('educare_newsletter_bg_settings')); ?>");
+        background: url("<?php echo esc_url( get_theme_mod('learnegy_newsletter_bg_settings')); ?>");
         background-size: cover;
         background-repeat: no-repeat;
         padding: 100px 0;
@@ -77,36 +77,36 @@
 </style>
 <?php
     }
-    add_action('wp_head', 'educare_head_styles');
+    add_action('wp_head', 'learnegy_head_styles');
 
-    function educare_widgets() {
+    function learnegy_widgets() {
         register_sidebar(array(
-            'name'                  =>  __('Newsletter Section', 'educare'),
-            'description'           =>  __('Add newsletter shortcode or form in this area', 'educare'),
-            'id'                    =>  'educare_newsletter_optin',
+            'name'                  =>  __('Newsletter Section', 'learnegy'),
+            'description'           =>  __('Add newsletter shortcode or form in this area', 'learnegy'),
+            'id'                    =>  'learnegy_newsletter_optin',
             'before_widget'         => '<div>',
             'after_widget'          =>  '</div>'
         ));
 
         register_sidebar(array(
-            'name'                  =>  __('Blog Sidebar', 'educare'),
-            'description'           =>  __('Blog archive page sidebar', 'educare'),
+            'name'                  =>  __('Blog Sidebar', 'learnegy'),
+            'description'           =>  __('Blog archive page sidebar', 'learnegy'),
             'id'                    =>  'blog-sidebar',
             'before_widget'         => '<div>',
             'after_widget'          =>  '</div>'
         ));
 
         register_sidebar(array(
-            'name'                  =>  __('Single Blog Sidebar', 'educare'),
-            'description'           =>  __('Blog single post page sidebar', 'educare'),
+            'name'                  =>  __('Single Blog Sidebar', 'learnegy'),
+            'description'           =>  __('Blog single post page sidebar', 'learnegy'),
             'id'                    =>  'blog-sidebar-single',
             'before_widget'         => '<div>',
             'after_widget'          =>  '</div>'
         ));
     }
-    add_action('widgets_init', 'educare_widgets');
+    add_action('widgets_init', 'learnegy_widgets');
 
-    function educare_skip_link_focus_fix() {
+    function learnegy_skip_link_focus_fix() {
     ?>
     <script>
         /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window
@@ -118,4 +118,4 @@
     </script>
     <?php
 }
-add_action( 'wp_print_footer_scripts', 'educare_skip_link_focus_fix' );
+add_action( 'wp_print_footer_scripts', 'learnegy_skip_link_focus_fix' );

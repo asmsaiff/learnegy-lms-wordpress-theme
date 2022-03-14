@@ -7,18 +7,18 @@
                     <div class="news-letter">
                         <div class="news-letter-header">
                             <h4>
-                                <?php echo esc_html(get_theme_mod('educare_newsletter_subheading_settings', 'Subscribe')); ?>
+                                <?php echo esc_html(get_theme_mod('learnegy_newsletter_subheading_settings', 'Subscribe')); ?>
                             </h4>
                             <h2 class="text-white">
-                                <?php echo esc_html(get_theme_mod('educare_newsletter_heading_settings', 'Our Newsletter')); ?>
+                                <?php echo esc_html(get_theme_mod('learnegy_newsletter_heading_settings', 'Our Newsletter')); ?>
                             </h2>
                             <p class="text-white">
-                                <?php echo esc_html(get_theme_mod('educare_newsletter_desc_settings')); ?>
+                                <?php echo esc_html(get_theme_mod('learnegy_newsletter_desc_settings')); ?>
                             </p>
                         </div>
                         <?php
-                            if(is_active_sidebar( 'educare_newsletter_optin' )) {
-                                dynamic_sidebar( 'educare_newsletter_optin' );
+                            if(is_active_sidebar( 'learnegy_newsletter_optin' )) {
+                                dynamic_sidebar( 'learnegy_newsletter_optin' );
                             }
                         ?>
                     </div>
