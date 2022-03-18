@@ -1,6 +1,11 @@
 <?php
-    require_once get_template_directory() . '/inc/learnegy-plugins.php';
+    define( 'CUSTOMIZER_REPEATER_VERSION', '1.1.0' );
+
     require_once get_template_directory() . '/inc/learnegy-post-meta.php';
+    require_once get_template_directory() . '/inc/learnegy-repeater.php';
+    require_once get_template_directory() . '/lib/learnegy-nav.php';
+    require_once get_template_directory() . '/inc/config/learnegy-customizer-config.php';
+    require_once get_template_directory() . '/inc/learnegy-plugins.php';
 
     if(!function_exists('learnegy_theme_setup')) {
         function learnegy_theme_setup() {
