@@ -51,7 +51,7 @@
     $wp_customize->add_setting( 'learnegy_homepage_faq_item_settings', array(
         'sanitize_callback' => 'learnegy_customizer_repeater_sanitize'
     ));
-    $wp_customize->add_control( new Customizer_Repeater( $wp_customize, 'learnegy_homepage_faq_item_ctrl', array(
+    $wp_customize->add_control( new Learnegy_Customizer_Repeater( $wp_customize, 'learnegy_homepage_faq_item_ctrl', array(
         'label'                                             => esc_html__('Accordion Item','learnegy'),
         'section'                                           => 'learnegy_homepage_faq',
         'settings'                                          =>  'learnegy_homepage_faq_item_settings',
