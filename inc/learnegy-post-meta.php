@@ -1,8 +1,8 @@
 <?php
-    if( !function_exists('acf_add_local_field_group') ):
+    if( function_exists('acf_add_local_field_group') ):
         acf_add_local_field_group(array(
             'key' => 'group_6211e8c13aefc',
-            'title' => 'Course Meta',
+            'title' => __('Course Meta', 'learnegy'),
             'fields' => array(
                 array(
                     'key' => 'field_6211e8d65177f',
@@ -51,7 +51,7 @@
 
         acf_add_local_field_group(array(
             'key' => 'group_62121af9335b4',
-            'title' => 'Event Meta',
+            'title' => __('Event Meta', 'learnegy'),
             'fields' => array(
                 array(
                     'key' => 'field_62121b385e054',
@@ -136,7 +136,7 @@
 
         acf_add_local_field_group(array(
             'key' => 'group_6211e2916f934',
-            'title' => 'Notice Date and Time',
+            'title' => __('Notice Date and Time', 'learnegy'),
             'fields' => array(
                 array(
                     'key' => 'field_6211e2b56138e',
@@ -204,7 +204,7 @@
 
         acf_add_local_field_group(array(
             'key' => 'group_6211fd88e1d48',
-            'title' => 'Teachers Social Media',
+            'title' => __('Teachers Social Media', 'learnegy'),
             'fields' => array(
                 array(
                     'key' => 'field_6211ffc186e67',

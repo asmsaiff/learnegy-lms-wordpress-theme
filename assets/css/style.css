@@ -19,9 +19,9 @@ body{
     overflow-x: hidden;
 }
 
-a{
-    display: inline-block;
-    text-decoration: none;
+a {
+	display: inline-block;
+	outline-width: 2px;
 }
 
 li{

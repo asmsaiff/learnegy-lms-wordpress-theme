@@ -3,7 +3,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) ) {
 	return null;
 }
 
-class Customizer_Repeater extends WP_Customize_Control {
+class Learnegy_Customizer_Repeater extends WP_Customize_Control {
 
 	public $id;
 	private $boxtitle = array();
