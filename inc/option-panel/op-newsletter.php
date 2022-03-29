@@ -57,7 +57,7 @@
         'label'             =>  __('Short Description', 'learnegy'),
         'section'           =>  'learnegy_newsletter',
         'settings'          =>  'learnegy_newsletter_desc_settings',
-        'type'              =>  'textarea'
+        'type'              =>  'text'
     ));
 
     $wp_customize->add_setting('learnegy_newsletter_bg_settings', array(

@@ -15,5 +15,5 @@
         'label'             =>  __('Footer Credit', 'learnegy'),
         'section'           =>  'learnegy_footer',
         'settings'          =>  'learnegy_footer_credit_settings',
-        'type'              =>  'textarea'
+        'type'              =>  'text'
     ));
