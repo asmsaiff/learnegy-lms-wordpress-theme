@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_blog', array(
-        'title' => 'Blog',
+        'title' => __('Blog', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -51,7 +51,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_blog_subheading_settings', array(
-        'default'           =>  'Discover Your Perfect',
+        'default'           =>  __('Discover Your Perfect', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -66,7 +66,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_blog_heading_settings', array(
-        'default'           =>  'Latest News',
+        'default'           =>  __('Latest News', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',

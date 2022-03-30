@@ -32,10 +32,6 @@
                                         }
                                     ?>
                                     <div class="event-header d-flex justify-content-between">
-                                        <div class="event-address d-flex">
-                                            <span><i class="fas fa-globe-europe"></i></span>
-                                            <p>Algolia</p>
-                                        </div>
                                         <div class="event-date d-flex">
                                             <span><i class="far fa-calendar"></i></span>
                                             <p><?php echo get_the_date(); ?></p>

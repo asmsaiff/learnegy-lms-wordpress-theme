@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_teacher', array(
-        'title' => 'Teacher',
+        'title' => __('Teacher', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -21,7 +21,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_teacher_subheading_settings', array(
-        'default'           => 'Welcome',
+        'default'           => __('Welcome', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_teacher_heading_settings', array(
-        'default'           => 'Expert Teachers',
+        'default'           => __('Expert Teachers', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -66,7 +66,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_vop_sec_heading_settings', array(
-        'default'           => 'Principal of learnegy School',
+        'default'           => __('Principal of learnegy School', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',

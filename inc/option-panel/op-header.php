@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_topbar', array(
-        'title' => 'Header',
+        'title' => __('Header', 'learnegy'),
         'panel' => 'learnegy',
         'priority' => 2,
     ));

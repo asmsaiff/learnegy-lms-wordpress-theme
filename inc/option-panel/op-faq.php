@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_homepage_faq', array(
-        'title' => 'FAQ',
+        'title' => __('FAQ', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -21,7 +21,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_homepage_faq_subheading_settings', array(
-        'default'           =>  'Distance Learning',
+        'default'           =>  __('Distance Learning', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_homepage_faq_heading_settings', array(
-        'default'           =>  'Flexible Study at Your Own Pace, According to Your Own Needs',
+        'default'           =>  __('Flexible Study at Your Own Pace, According to Your Own Needs', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -52,7 +52,7 @@
         'sanitize_callback' => 'learnegy_customizer_repeater_sanitize'
     ));
     $wp_customize->add_control( new Learnegy_Customizer_Repeater( $wp_customize, 'learnegy_homepage_faq_item_ctrl', array(
-        'label'                                             => esc_html__('Accordion Item','learnegy'),
+        'label'                                             => __('Accordion Item','learnegy'),
         'section'                                           => 'learnegy_homepage_faq',
         'settings'                                          =>  'learnegy_homepage_faq_item_settings',
         'customizer_repeater_title_control'                 => true,

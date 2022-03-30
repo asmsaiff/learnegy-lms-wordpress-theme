@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_homepage_info', array(
-        'title' => 'Info',
+        'title' => __('Info', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -21,7 +21,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_homepage_info_subheading_settings', array(
-        'default'           =>  'Welcome',
+        'default'           =>  __('Welcome', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_homepage_info_heading_settings', array(
-        'default'           =>  'learnegy School & College',
+        'default'           =>  __('learnegy School & College', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -65,7 +65,7 @@
         'sanitize_callback' => 'learnegy_customizer_repeater_sanitize'
     ));
     $wp_customize->add_control( new Learnegy_Customizer_Repeater( $wp_customize, 'learnegy_homepage_info_item_ctrl', array(
-        'label'                                             => esc_html__('Accordion Item','learnegy'),
+        'label'                                             => __('Accordion Item','learnegy'),
         'section'                                           => 'learnegy_homepage_info',
         'settings'                                          =>  'learnegy_homepage_info_item_settings',
         'customizer_repeater_title_control'                 => true,
