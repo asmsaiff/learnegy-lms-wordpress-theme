@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_newsletter', array(
-        'title' => 'Newsletter',
+        'title' => __('Newsletter', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -21,7 +21,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_newsletter_subheading_settings', array(
-        'default'           =>  'Subscribe',
+        'default'           =>  __('Subscribe', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_newsletter_heading_settings', array(
-        'default'           =>  'Our Newsletter',
+        'default'           =>  __('Our Newsletter', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',

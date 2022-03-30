@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="event-card-info">
                                             <p>
-                                                <?php echo wp_trim_words( get_the_content(), 20, '...' )(); ?>
+                                                <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
                                             </p>
                                         </div>
                                         <a class="event-view-details mt-2" href="<?php the_permalink(); ?>">

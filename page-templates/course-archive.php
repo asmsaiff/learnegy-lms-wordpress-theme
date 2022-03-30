@@ -46,7 +46,7 @@
                                                 <?php the_title(); ?>
                                             </h4>
                                             <p>
-                                                <?php echo wp_trim_words( get_the_content(), 20, '...' )(); ?>
+                                                <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
                                             </p>
                                             <div
                                                 class="d-flex justify-content-between align-items-center course-card-footer">

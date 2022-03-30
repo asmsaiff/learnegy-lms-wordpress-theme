@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_event', array(
-        'title' => 'Event',
+        'title' => __('Event', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -21,7 +21,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_event_subheading_settings', array(
-        'default'           =>  'Our Recent',
+        'default'           =>  __('Our Recent', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_event_heading_settings', array(
-        'default'           =>  'Events',
+        'default'           =>  __('Events', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -64,7 +64,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_event_btn_label_settings', array(
-        'default'           =>  'See More',
+        'default'           =>  __('See More', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',

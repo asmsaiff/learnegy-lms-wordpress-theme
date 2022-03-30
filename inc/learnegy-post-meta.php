@@ -6,7 +6,7 @@
             'fields' => array(
                 array(
                     'key' => 'field_6211e8d65177f',
-                    'label' => 'Time Lenth',
+                    'label' => __('Time Length', 'learnegy'),
                     'name' => 'time_length',
                     'type' => 'text',
                     'instructions' => '',
@@ -55,7 +55,7 @@
             'fields' => array(
                 array(
                     'key' => 'field_62121b385e054',
-                    'label' => 'Event Information',
+                    'label' => __('Event Information', 'learnegy'),
                     'name' => 'event_information',
                     'type' => 'group',
                     'instructions' => '',
@@ -70,7 +70,7 @@
                     'sub_fields' => array(
                         array(
                             'key' => 'field_62121b805e055',
-                            'label' => 'Place/Location/Auditorium',
+                            'label' => __('Place/Location/Auditorium', 'learnegy'),
                             'name' => 'place_location_auditorium',
                             'type' => 'text',
                             'instructions' => '',
@@ -89,7 +89,7 @@
                         ),
                         array(
                             'key' => 'field_62121b915e056',
-                            'label' => 'Date & Time',
+                            'label' => __('Date & Time', 'learnegy'),
                             'name' => 'event_date_time',
                             'type' => 'text',
                             'instructions' => '',
@@ -140,7 +140,7 @@
             'fields' => array(
                 array(
                     'key' => 'field_6211e2b56138e',
-                    'label' => 'Date and Time',
+                    'label' => __('Date and Time', 'learnegy'),
                     'name' => 'date_time',
                     'type' => 'text',
                     'instructions' => '',
@@ -159,7 +159,7 @@
                 ),
                 array(
                     'key' => 'field_6211e4e6d7af9',
-                    'label' => 'Category',
+                    'label' => __('Category', 'learnegy'),
                     'name' => 'en_category',
                     'type' => 'text',
                     'instructions' => '',
@@ -208,7 +208,7 @@
             'fields' => array(
                 array(
                     'key' => 'field_6211ffc186e67',
-                    'label' => 'Facebook',
+                    'label' => __('Facebook', 'learnegy'),
                     'name' => 'facebook',
                     'type' => 'group',
                     'instructions' => '',
@@ -223,7 +223,7 @@
                     'sub_fields' => array(
                         array(
                             'key' => 'field_6211ffdf86e68',
-                            'label' => 'Show',
+                            'label' => __('Show', 'learnegy'),
                             'name' => 'show',
                             'type' => 'true_false',
                             'instructions' => '',
@@ -242,7 +242,7 @@
                         ),
                         array(
                             'key' => 'field_6212004886e69',
-                            'label' => 'Link',
+                            'label' => __('Link', 'learnegy'),
                             'name' => 'flink',
                             'type' => 'url',
                             'instructions' => '',
@@ -268,7 +268,7 @@
                 ),
                 array(
                     'key' => 'field_621200db86e6a',
-                    'label' => 'Twitter',
+                    'label' => __('Twitter', 'learnegy'),
                     'name' => 'twitter',
                     'type' => 'group',
                     'instructions' => '',
@@ -283,7 +283,7 @@
                     'sub_fields' => array(
                         array(
                             'key' => 'field_621200db86e6b',
-                            'label' => 'Show',
+                            'label' => __('Show', 'learnegy'),
                             'name' => 't_show',
                             'type' => 'true_false',
                             'instructions' => '',
@@ -302,7 +302,7 @@
                         ),
                         array(
                             'key' => 'field_621200db86e6c',
-                            'label' => 'Link',
+                            'label' => __('Link', 'learnegy'),
                             'name' => 'tlink',
                             'type' => 'url',
                             'instructions' => '',
@@ -328,7 +328,7 @@
                 ),
                 array(
                     'key' => 'field_6212010f86e6d',
-                    'label' => 'LinkedIn',
+                    'label' => __('LinkedIn', 'learnegy'),
                     'name' => 'linkedin',
                     'type' => 'group',
                     'instructions' => '',
@@ -343,7 +343,7 @@
                     'sub_fields' => array(
                         array(
                             'key' => 'field_6212010f86e6e',
-                            'label' => 'Show',
+                            'label' => __('Show', 'learnegy'),
                             'name' => 'l_show',
                             'type' => 'true_false',
                             'instructions' => '',
@@ -362,7 +362,7 @@
                         ),
                         array(
                             'key' => 'field_6212010f86e6f',
-                            'label' => 'Link',
+                            'label' => __('Link', 'learnegy'),
                             'name' => 'llink',
                             'type' => 'url',
                             'instructions' => '',
@@ -388,7 +388,7 @@
                 ),
                 array(
                     'key' => 'field_6212013b86e70',
-                    'label' => 'Instagram',
+                    'label' => __('Instagram', 'learnegy'),
                     'name' => 'instagram',
                     'type' => 'group',
                     'instructions' => '',
@@ -403,7 +403,7 @@
                     'sub_fields' => array(
                         array(
                             'key' => 'field_6212013b86e71',
-                            'label' => 'Show',
+                            'label' => __('Show', 'learnegy'),
                             'name' => 'i_show',
                             'type' => 'true_false',
                             'instructions' => '',
@@ -422,7 +422,7 @@
                         ),
                         array(
                             'key' => 'field_6212013b86e72',
-                            'label' => 'Link',
+                            'label' => __('Link', 'learnegy'),
                             'name' => 'ilink',
                             'type' => 'url',
                             'instructions' => '',

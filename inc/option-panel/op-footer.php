@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_footer', array(
-        'title'         => 'Footer',
+        'title'         => __('Footer', 'learnegy'),
         'panel'         => 'learnegy',
         'priority'      => 2,
     ));

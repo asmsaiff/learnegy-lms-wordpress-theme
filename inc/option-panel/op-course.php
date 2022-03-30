@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_course', array(
-        'title' => 'Course',
+        'title' => __('Course', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -21,7 +21,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_course_subheading_settings', array(
-        'default'           =>  'Welcome',
+        'default'           =>  __('Welcome', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_course_heading_settings', array(
-        'default'           =>  'Courses We Offer',
+        'default'           =>  __('Courses We Offer', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',

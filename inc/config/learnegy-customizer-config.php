@@ -7,7 +7,7 @@
         $wp_customize->register_panel_type( 'learnegy_WP_Customize_Panel' );
 
         $learnegy_theme_options = new learnegy_WP_Customize_Panel( $wp_customize, 'learnegy_theme_options', array(
-            'title'             => 'Learnegy Theme Options',
+            'title'             => __('Learnegy Theme Options', 'learnegy'),
             'capability'        => 'edit_theme_options',
             'priority'          => 1,
         ));
@@ -19,7 +19,7 @@
          * ================================================
          */
         $learnegy_header = new learnegy_WP_Customize_Panel( $wp_customize, 'learnegy', array(
-            'title'             => 'General',
+            'title'             => __('General', 'learnegy'),
             'capability'        => 'edit_theme_options',
             'panel'             => 'learnegy_theme_options',
             'priority'          => 1,
@@ -35,7 +35,7 @@
          * ================================================
          */
         $learnegy_homepage = new learnegy_WP_Customize_Panel( $wp_customize, 'learnegy_homepage', array(
-            'title'             => 'Homepage Options',
+            'title'             => __('Homepage Options', 'learnegy'),
             'capability'        => 'edit_theme_options',
             'panel'             => 'learnegy_theme_options',
             'priority'          => 2,

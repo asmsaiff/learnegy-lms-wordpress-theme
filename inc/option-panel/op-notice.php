@@ -1,6 +1,6 @@
 <?php
     $wp_customize->add_section( 'learnegy_homepage_notice', array(
-        'title' => 'Notice Board',
+        'title' => __('Notice Board', 'learnegy'),
         'panel' => 'learnegy_homepage',
         'priority' => 2,
     ));
@@ -21,7 +21,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_homepage_notice_subheading_settings', array(
-        'default'           =>  'Welcome',
+        'default'           =>  __('Welcome', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
@@ -35,7 +35,7 @@
     ));
 
     $wp_customize->add_setting('learnegy_homepage_notice_heading_settings', array(
-        'default'           =>  'learnegy School & College',
+        'default'           =>  __('learnegy School & College', 'learnegy'),
         'capability'        => 'edit_theme_options',
         'transport'         => 'refresh',
         'type'              => 'theme_mod',
