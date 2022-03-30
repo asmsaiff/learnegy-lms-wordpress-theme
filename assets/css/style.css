@@ -1298,7 +1298,3 @@ p.comment-policy {
     font-size: small;
     font-style: italic;
 }
-
-.primary-menu li.menu-item-has-children:focus > ul {
-    display: block;
-}
